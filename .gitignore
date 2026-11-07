@@ -1,0 +1,4 @@
+reportes/
+.netlify/
+.DS_Store
+netlify.toml
