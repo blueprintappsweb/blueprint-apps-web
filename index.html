@@ -27,9 +27,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="styles.css?v=11">
 <script>(function(d){d.classList.add('js');var l=null;try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('bp-lang')}catch(e){}if(!l){var n=(navigator.languages&&navigator.languages[0])||navigator.language||'';l=n.toLowerCase().indexOf('es')===0?'es':'en'}if(l==='es'){d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},800)}})(document.documentElement)</script>
-<script src="script.js?v=11" defer></script>
+<script src="script.js?v=13" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -240,7 +240,7 @@
           <div class="app-bar">
             <div class="app-title">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-              <strong data-i18n="inv.store">El Desierto Hardware</strong>
+              <strong data-i18n="inv.store">High Desert Hardware</strong>
             </div>
             <span class="live"><i></i><span data-i18n="inv.live">Live</span></span>
           </div>
@@ -396,59 +396,123 @@
           <figure class="cf-slide" data-i="1"><div class="cf-shot"><span class="ex-bar"><i></i><i></i><i></i></span><img src="img/ejemplo-taller.jpg" alt="" width="880" height="550" loading="lazy" decoding="async"></div></figure>
           <figure class="cf-slide" data-i="2"><div class="cf-shot"><span class="ex-bar"><i></i><i></i><i></i></span><img src="img/ejemplo-inventario.jpg" alt="" width="880" height="550" loading="lazy" decoding="async"></div></figure>
           <figure class="cf-slide" data-i="3"><div class="cf-shot is-mk"><div class="mk mk-book" aria-hidden="true">
-              <aside class="mk-side">
-                <b class="mk-brand">La Mesilla<small>Barbershop</small></b>
-                <ol class="mk-steps"><li><i>1</i><span data-i18n="mk.s1">Service</span></li><li class="on"><i>2</i><span data-i18n="mk.s2">Date &amp; time</span></li><li><i>3</i><span data-i18n="mk.s3">Your info</span></li><li><i>4</i><span data-i18n="mk.s4">Confirm</span></li></ol>
-                <p class="mk-secure" data-i18n="mk.secure">Your data is secure</p>
-              </aside>
-              <div class="mk-main">
-                <h4 data-i18n="mk.book">Book an appointment</h4>
-                <div class="mk-cols">
-                  <div class="mk-card"><div class="mk-cardh" data-i18n="mk.month">November 2026</div><div class="mk-wd" data-i18n="mk.days"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div><div class="mk-cal"><span class="past off">1</span><span class="past">2</span><span class="past">3</span><span class="past">4</span><span class="past">5</span><span class="past">6</span><span class="past">7</span><span class="past off">8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span class="off">15</span><span>16</span><span>17</span><span>18</span><span class="sel">19</span><span>20</span><span>21</span><span class="off">22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span class="off">29</span><span>30</span></div></div>
-                  <div class="mk-card"><div class="mk-cardh" data-i18n="mk.day">Thursday, Nov 19</div><div class="mk-slots"><span>9:00 AM</span><span class="off">10:00 AM</span><span>11:00 AM</span><span class="off">12:00 PM</span><span>1:00 PM</span><span class="sel">2:00 PM</span><span>3:00 PM</span><span class="off">4:00 PM</span></div></div>
-                </div>
-                <div class="mk-foot"><span class="mk-btn ghost" data-i18n="mk.back">Back</span><span class="mk-btn" data-i18n="mk.cont">Continue</span></div>
-              </div>
-            </div></div></figure>
+  <aside class="bk-side">
+    <div class="bk-logo"><svg class="mi lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19c3-4 6-7 10-9"/></svg><b>Mesilla Valley<small>Wellness</small></b></div>
+    <ol class="bk-steps">
+      <li><em>1</em><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg><span data-i18n="bk.s1">Select service</span></li>
+      <li class="on"><em>2</em><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-i18n="bk.s2">Date &amp; time</span></li>
+      <li><em>3</em><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></svg><span data-i18n="bk.s3">Your information</span></li>
+      <li><em>4</em><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg><span data-i18n="bk.s4">Confirm</span></li>
+    </ol>
+    <svg class="bk-art" viewBox="0 0 200 150" aria-hidden="true">
+      <ellipse cx="110" cy="142" rx="88" ry="7" fill="rgba(47,92,72,.12)"/>
+      <rect x="118" y="34" width="34" height="108" rx="17" fill="#8fb39f"/><rect x="118" y="34" width="34" height="108" rx="17" fill="url(#bkg)" opacity=".5"/>
+      <rect x="146" y="40" width="22" height="100" rx="4" fill="#a9c7b5"/>
+      <path d="M58 142c-2-30 4-58 18-80M58 142c8-26 22-46 42-56M58 142c-10-22-26-36-46-40M58 142c-4-28-16-48-30-60M58 142c12-14 28-22 50-22" stroke="#3f7a5c" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M40 142h40l-6-22H46z" fill="#c9b79c"/>
+      <defs><linearGradient id="bkg" x1="0" x2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#3f7a5c"/></linearGradient></defs>
+    </svg>
+    <p class="bk-trust"><svg class="mi md" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span data-i18n="bk.trust">Secure booking · Las Cruces, NM</span></p>
+  </aside>
+  <div class="bk-main">
+    <div class="bk-head"><h4><span data-i18n="bk.title">Book an appointment</span></h4><span class="bk-badge"><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span data-i18n="bk.secure">Your data is secure</span></span></div>
+    <div class="bk-cols">
+      <div class="bk-card">
+        <div class="bk-ch"><span data-i18n="bk.pickd">Select a date</span></div>
+        <div class="bk-month"><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span data-i18n="bk.month">December 2026</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></div>
+        <div class="bk-wd"><span data-i18n="bk.wd"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></span></div>
+        <div class="bk-cal"><span class="out">29</span><span class="out">30</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span class="na">6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span class="na">13</span><span>14</span><span>15</span><span>16</span><span class="sel">17</span><span>18</span><span>19</span><span class="na">20</span><span>21</span><span>22</span><span>23</span><span>24</span><span class="na">25</span><span>26</span><span class="na">27</span><span>28</span><span>29</span><span>30</span><span>31</span><span class="out">1</span><span class="out">2</span></div>
+        <span class="bk-link" data-i18n="bk.today">View today</span>
+      </div>
+      <div class="bk-card">
+        <div class="bk-ch"><span data-i18n="bk.pickt">Select a time</span></div>
+        <div class="bk-month day"><span data-i18n="bk.day">Thursday, Dec 17</span></div>
+        <div class="bk-slots"><span>8:00 AM</span><span class="off"><svg class="mi xs" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 4l16 16M20 4L4 20"/></svg>9:00 AM</span><span>10:00 AM</span><span>11:00 AM</span><span class="off"><svg class="mi xs" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 4l16 16M20 4L4 20"/></svg>12:00 PM</span><span>1:00 PM</span><span>2:00 PM</span><span class="sel">3:00 PM</span><span class="off"><svg class="mi xs" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 4l16 16M20 4L4 20"/></svg>4:00 PM</span><span>5:00 PM</span></div>
+        <span class="bk-note" data-i18n="bk.tz">All times in Mountain Time (MT)</span>
+      </div>
+    </div>
+    <div class="bk-foot">
+      <span class="bk-btn ghost"><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span data-i18n="bk.back">Back</span></span>
+      <span class="bk-consent"><i></i><span data-i18n="bk.consent">Send me a text reminder the day before.</span></span>
+      <span class="bk-btn"><span data-i18n="bk.next">Continue</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></span>
+    </div>
+  </div>
+</div></div></figure>
           <figure class="cf-slide" data-i="4"><div class="cf-shot is-mk"><div class="mk mk-quote" aria-hidden="true">
-              <aside class="mk-side">
-                <b class="mk-brand">Techos del Valle<small>Roofing</small></b>
-                <ol class="mk-steps"><li class="on"><i>1</i><span data-i18n="mk.q1">Project</span></li><li><i>2</i><span data-i18n="mk.q2">Materials</span></li><li><i>3</i><span data-i18n="mk.q3">Labor</span></li><li><i>4</i><span data-i18n="mk.q4">Summary</span></li></ol>
-              </aside>
-              <div class="mk-main">
-                <h4 data-i18n="mk.q">Quote calculator</h4>
-                <div class="mk-cols">
-                  <div class="mk-card mk-form">
-                    <label data-i18n="mk.qname">Project name</label><div class="mk-input" data-i18n="mk.qval">New roof · Rodríguez home</div>
-                    <div class="mk-row"><div><label data-i18n="mk.qclient">Client</label><div class="mk-input">R. Rodríguez</div></div><div><label data-i18n="mk.qarea">Area</label><div class="mk-input">2,100 ft²</div></div></div>
-                    <div class="mk-acc"><span data-i18n="mk.q2">Materials</span><b>$5,900</b></div>
-                    <div class="mk-acc"><span data-i18n="mk.q3">Labor</span><b>$2,500</b></div>
-                  </div>
-                  <div class="mk-card mk-sum">
-                    <div class="mk-line"><span data-i18n="mk.qcost">Cost</span><b>$8,400</b></div>
-                    <div class="mk-line"><span data-i18n="mk.qmargin">Margin</span><b>30%</b></div>
-                    <div class="mk-line big"><span data-i18n="mk.qtotal">Quote total</span><b>$12,000</b></div>
-                    <div class="mk-bars"><i style="--h:70%"><em>$8.4k</em></i><i style="--h:30%"><em>$3.6k</em></i><i style="--h:100%"><em>$12k</em></i></div>
-                    <div class="mk-barl"><span data-i18n="mk.qcost">Cost</span><span data-i18n="mk.qprofit">Profit</span><span>Total</span></div>
-                  </div>
-                </div>
-                <div class="mk-foot"><span class="mk-btn ghost" data-i18n="mk.qsave">Save</span><span class="mk-btn" data-i18n="mk.qsend">Send quote</span></div>
-              </div>
-            </div></div></figure>
+  <div class="qt-top"><h4><span data-i18n="qt.title">Quote calculator</span></h4><span class="qt-co">Summit Roofing Co.</span></div>
+  <div class="qt-body">
+    <ol class="qt-steps"><li class="on"><em>1</em><div><b data-i18n="qt.s1">Project</b><small data-i18n="qt.d1">Basic project details.</small></div></li><li class=""><em>2</em><div><b data-i18n="qt.s2">Materials</b><small data-i18n="qt.d2">Shingles, underlayment, trim.</small></div></li><li class=""><em>3</em><div><b data-i18n="qt.s3">Labor</b><small data-i18n="qt.d3">Crew size and hours.</small></div></li><li class=""><em>4</em><div><b data-i18n="qt.s4">Calculation</b><small data-i18n="qt.d4">Costs and margin.</small></div></li><li class=""><em>5</em><div><b data-i18n="qt.s5">Summary</b><small data-i18n="qt.d5">Review and send.</small></div></li></ol>
+    <div class="qt-mid">
+      <div class="qt-card">
+        <b class="qt-h">1. <span data-i18n="qt.s1">Project</span></b>
+        <label data-i18n="qt.name">Project name</label>
+        <div class="qt-in"><span data-i18n="qt.nameV">Roof replacement · Miller home</span></div>
+        <div class="qt-row">
+          <div><label data-i18n="qt.client">Client</label><div class="qt-in sel">Dana Miller<svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></div></div>
+          <div><label data-i18n="qt.dur">Duration</label><div class="qt-in sel"><span data-i18n="qt.durV">4 days</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></div></div>
+        </div>
+        <label data-i18n="qt.desc">Description (optional)</label>
+        <div class="qt-in area"><span data-i18n="qt.descV">Tear-off and new architectural shingles, 2,100 sq ft, with new drip edge and vents.</span></div>
+      </div>
+      <div class="qt-acc"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/></svg><b>2. <span data-i18n="qt.s2">Materials</span></b><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></div><div class="qt-acc"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg><b>3. <span data-i18n="qt.s3">Labor</span></b><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></div><div class="qt-acc"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v9l7.8 4.5A9 9 0 1 1 12 3z"/><path d="M15 3.5A9 9 0 0 1 20.5 12H15z"/></svg><b>4. <span data-i18n="qt.s4">Calculation</span></b><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></div><div class="qt-acc"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg><b>5. <span data-i18n="qt.s5">Summary</span></b><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></div>
+    </div>
+    <div class="qt-right">
+      <div class="qt-card">
+        <div class="qt-ch"><span data-i18n="qt.details">Calculation details</span><svg class="mi sm up" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></div>
+        <div class="qt-line"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg><span data-i18n="qt.cost">Cost</span><b>$8,400</b></div>
+        <div class="qt-line"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg><span data-i18n="qt.margin">Margin</span><b>30%</b></div>
+        <div class="qt-line"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg><span data-i18n="qt.total">Quote total</span><b>$12,000</b></div>
+      </div>
+      <div class="qt-card">
+        <div class="qt-ch"><span data-i18n="qt.profitT">Profit</span><svg class="mi sm up" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></div>
+        <small data-i18n="qt.exp">Expected profit</small>
+        <div class="qt-big">$3,600</div>
+        <small class="qt-pm" data-i18n="qt.pm">30% margin</small>
+        <div class="qt-chart">
+          <div class="qt-y"><span>$12k</span><span>$8k</span><span>$4k</span><span>$0</span></div>
+          <div class="qt-plot"><i style="--h:70%"><em>$8,400</em></i><i style="--h:30%"><em>$3,600</em></i><i style="--h:100%"><em>$12,000</em></i></div>
+        </div>
+        <div class="qt-x"><span data-i18n="qt.cost">Cost</span><span data-i18n="qt.profit">Profit</span><span>Total</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="qt-foot"><span class="qt-edit"><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="qt.edited">Last edited 2 minutes ago</span></span><span class="qt-btn ghost"><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v18l-5-4-5 4z"/></svg><span data-i18n="qt.save">Save</span></span><span class="qt-btn"><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 14h6M9 17h4"/></svg><span data-i18n="qt.create">Create quote</span></span></div>
+</div></div></figure>
           <figure class="cf-slide" data-i="5"><div class="cf-shot is-mk"><div class="mk mk-dash" aria-hidden="true">
-              <div class="mk-top"><h4 data-i18n="mk.p">Project dashboard</h4><span class="mk-pill">Constructora Los Órganos</span></div>
-              <div class="mk-kpis">
-                <div><small data-i18n="mk.p1">Tasks done</small><b>128</b><em class="up">+18%</em></div>
-                <div><small data-i18n="mk.p2">Open tasks</small><b>37</b><em class="down">−12%</em></div>
-                <div><small data-i18n="mk.p3">Progress</small><b>72%</b><span class="mk-prog"><i style="width:72%"></i></span></div>
-                <div><small data-i18n="mk.p4">Budget used</small><b>63%</b><span class="mk-prog"><i style="width:63%"></i></span></div>
-              </div>
-              <div class="mk-grid3">
-                <div class="mk-card"><div class="mk-cardh" data-i18n="mk.ptasks">Tasks</div><div class="mk-donut"><b>165</b></div></div>
-                <div class="mk-card"><div class="mk-cardh" data-i18n="mk.pprog">Progress by phase</div><svg class="mk-chart" viewBox="0 0 100 52" preserveAspectRatio="none"><path class="area" d="M4 48 L30 40 L56 27 L82 13 L96 5 L96 52 L4 52 Z"/><polyline points="4,48 30,40 56,27 82,13 96,5"/><circle cx="30" cy="40" r="2.2"/><circle cx="56" cy="27" r="2.2"/><circle cx="82" cy="13" r="2.2"/></svg></div>
-                <div class="mk-card"><div class="mk-cardh" data-i18n="mk.pmat">Materials</div><ul class="mk-mat"><li><span data-i18n="mk.m1">Concrete</span><i class="ok"></i></li><li><span data-i18n="mk.m2">Steel beams</span><i class="mid"></i></li><li><span data-i18n="mk.m3">Drywall</span><i class="mid"></i></li><li><span data-i18n="mk.m4">Windows</span><i class="bad"></i></li></ul></div>
-              </div>
-            </div></div></figure>
+  <div class="pd-top"><h4><span data-i18n="pd.title">Project dashboard</span></h4><span class="pd-co">Rio Grande Builders</span><span class="pd-pill"><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-i18n="pd.period">This month</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></span><span class="pd-pill"><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16l-6 8v6l-4-2v-4z"/></svg><span data-i18n="pd.filter">Filter</span></span></div>
+  <div class="pd-kpis">
+  <div><svg class="mi kp" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg><span><small data-i18n="pd.k1">Tasks completed</small><b>128</b><em class="up">+18%</em> <small class="vs" data-i18n="pd.vs">vs. last month</small></span><svg class="pd-spark" viewBox="0 0 60 24"><path class="a" d="M0 22 L10 18 L18 19 L28 12 L36 13 L46 7 L60 2 L60 24 L0 24Z"/><polyline points="0,22 10,18 18,19 28,12 36,13 46,7 60,2"/></svg></div>
+  <div><svg class="mi kp" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><small data-i18n="pd.k2">Open tasks</small><b>37</b><em class="dn">−12%</em> <small class="vs" data-i18n="pd.vs">vs. last month</small></span><svg class="pd-spark" viewBox="0 0 60 24"><path class="a" d="M0 20 L10 17 L18 18 L28 11 L36 12 L46 8 L60 4 L60 24 L0 24Z"/><polyline points="0,20 10,17 18,18 28,11 36,12 46,8 60,4"/></svg></div>
+  <div><svg class="mi kp" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span><small data-i18n="pd.k3">Total progress</small><b>72%</b><i class="pd-bar"><i style="width:72%"></i></i><em class="up">+8%</em> <small class="vs" data-i18n="pd.vs">vs. last month</small></span></div>
+  <div><svg class="mi kp" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M16 7c0-1.7-1.8-3-4-3s-4 1.3-4 3 1.8 2.6 4 3 4 1.3 4 3-1.8 3-4 3-4-1.3-4-3"/></svg><span><small data-i18n="pd.k4">Budget used</small><b>63%</b><i class="pd-bar"><i style="width:63%"></i></i><em class="dn">−4%</em> <small class="vs" data-i18n="pd.vs">vs. last month</small></span></div>
+</div>
+  <div class="pd-row">
+    <div class="pd-card">
+      <div class="pd-ch"><span data-i18n="pd.tasks">Tasks</span></div>
+      <div class="pd-donutw"><div class="pd-donut"><b>165</b><small data-i18n="pd.total">Total</small></div>
+        <ul class="pd-leg"><li><i class="c1"></i><span data-i18n="pd.l1">Completed</span><b>128 (78%)</b></li><li><i class="c2"></i><span data-i18n="pd.l2">In progress</span><b>24 (14%)</b></li><li><i class="c3"></i><span data-i18n="pd.l3">Open</span><b>13 (8%)</b></li></ul></div>
+      <div class="pd-more"><span data-i18n="pd.all">Show all tasks</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+    <div class="pd-card">
+      <div class="pd-ch"><span data-i18n="pd.prog">Project progress</span><span class="pd-sel"><span data-i18n="pd.overall">Overall</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></span></div>
+      <div class="pd-line">
+        <div class="pd-yl"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div>
+        <svg viewBox="0 0 100 60" preserveAspectRatio="none"><g class="gl"><path d="M0 0H100M0 15H100M0 30H100M0 45H100M0 60H100"/></g><path class="ar" d="M2 58 C 20 54, 30 46, 36 42 S 58 24, 66 20 S 88 6, 98 2 L98 60 L2 60Z"/><path class="ln" d="M2 58 C 20 54, 30 46, 36 42 S 58 24, 66 20 S 88 6, 98 2"/></svg>
+      </div>
+      <div class="pd-xl"><span data-i18n="pd.x1">Planning</span><span data-i18n="pd.x2">Framing</span><span data-i18n="pd.x3">Interior</span><span data-i18n="pd.x4">Finish</span></div>
+      <div class="pd-more"><span data-i18n="pd.report">View progress report</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+    <div class="pd-card">
+      <div class="pd-ch"><span data-i18n="pd.mats">Materials</span><span class="pd-sel"><span data-i18n="pd.cats">All</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></span></div>
+      <ul class="pd-mat"><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg><span data-i18n="pd.m1">Concrete</span><span class="q">42 cy</span><i class="ok"></i></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 10h18M3 15h18M9 5v5M15 10v5M9 15v4"/></svg><span data-i18n="pd.m2">Bricks</span><span class="q">12,000</span><i class="ok"></i></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12M6 20h12M12 4v16"/></svg><span data-i18n="pd.m3">Steel beams</span><span class="q">18 pcs</span><i class="mid"></i></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span data-i18n="pd.m4">Insulation</span><span class="q">1,300 sf</span><i class="mid"></i></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 8h6M9 12h6"/></svg><span data-i18n="pd.m5">Drywall</span><span class="q">40 pcs</span><i class="bad"></i></li></ul>
+      <div class="pd-more"><span data-i18n="pd.allm">View all materials</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </div>
+  <div class="pd-row two">
+    <div class="pd-card"><div class="pd-ch"><span data-i18n="pd.open">Open tasks</span></div><ul class="pd-tasks"><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></svg><span data-i18n="pd.t1">Upper-level electrical</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="d" data-i18n="pd.t1d">Dec 18</span><span class="pr hi" data-i18n="pd.hi">High</span></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg><span data-i18n="pd.t2">Foundation waterproofing</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="d" data-i18n="pd.t2d">Dec 21</span><span class="pr md" data-i18n="pd.md">Medium</span></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 8h6M9 12h6"/></svg><span data-i18n="pd.t3">Ground-floor drywall</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="d" data-i18n="pd.t3d">Jan 4</span><span class="pr md" data-i18n="pd.md">Medium</span></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 10h16M4 15h16M10 4v16M15 4v16"/></svg><span data-i18n="pd.t4">Bathroom tile</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="d" data-i18n="pd.t4d">Jan 8</span><span class="pr lo" data-i18n="pd.lo">Low</span></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18L12 4z"/><path d="M8 14h8"/></svg><span data-i18n="pd.t5">Roof framing inspection</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="d" data-i18n="pd.t5d">Jan 11</span><span class="pr md" data-i18n="pd.md">Medium</span></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c3 0 5-2 5-5l9-9a2 2 0 0 0-3-3l-9 9c-3 0-5 2-5 5z"/></svg><span data-i18n="pd.t6">Exterior paint</span><svg class="mi sm" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span class="d" data-i18n="pd.t6d">Jan 15</span><span class="pr lo" data-i18n="pd.lo">Low</span></li></ul></div>
+    <div class="pd-card"><div class="pd-ch"><span data-i18n="pd.buy">Order materials</span></div><ul class="pd-buy"><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12M6 20h12M12 4v16"/></svg><span data-i18n="pd.m3">Steel beams</span><span class="miss">7 <span data-i18n="pd.pcs">pcs missing</span></span><span class="ob" data-i18n="pd.order">Order</span></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><span data-i18n="pd.m4">Insulation</span><span class="miss">860 <span data-i18n="pd.sf">sq ft missing</span></span><span class="ob" data-i18n="pd.order">Order</span></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 8h6M9 12h6"/></svg><span data-i18n="pd.m5">Drywall</span><span class="miss">60 <span data-i18n="pd.pcs">pcs missing</span></span><span class="ob" data-i18n="pd.order">Order</span></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M12 4v16M4 12h16"/></svg><span data-i18n="pd.m6">Windows</span><span class="miss">12 <span data-i18n="pd.units">units missing</span></span><span class="ob" data-i18n="pd.order">Order</span></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7l8-4 8 4-8 4z"/><path d="M4 12l8 4 8-4M4 17l8 4 8-4"/></svg><span data-i18n="pd.m7">Roof shingles</span><span class="miss">40 <span data-i18n="pd.bund">bundles missing</span></span><span class="ob" data-i18n="pd.order">Order</span></li><li><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h10a4 4 0 0 1 4 4v8"/><path d="M4 4v8M14 16h8"/></svg><span data-i18n="pd.m8">Copper pipe</span><span class="miss">120 <span data-i18n="pd.ft">ft missing</span></span><span class="ob" data-i18n="pd.order">Order</span></li></ul></div>
+  </div>
+</div></div></figure>
         </div>
         <button class="cf-btn prev" type="button" aria-label="Previous example" data-i18n-aria="cf.prev">‹</button>
         <button class="cf-btn next" type="button" aria-label="Next example" data-i18n-aria="cf.next">›</button>
@@ -457,7 +521,7 @@
       <div class="cf-caps" aria-live="polite">
           <div class="cf-c" data-i="0">
             <span class="tag" data-i18n="ex1.tag">Church</span>
-            <h3 data-i18n="ex1.title">Comunidad de Gracia Church</h3>
+            <h3 data-i18n="ex1.title">Grace Community Church</h3>
             <p data-i18n="ex1.text">Service times, live stream, events, prayer requests and online giving.</p>
             <a class="btn btn-outline ex-cta" href="ejemplos/iglesia/" target="_blank" rel="noopener"><span data-i18n="ex.view">View live example</span> <span aria-hidden="true">↗</span></a>
           </div>
@@ -469,25 +533,25 @@
           </div>
           <div class="cf-c" data-i="2" hidden>
             <span class="tag" data-i18n="ex3.tag">App</span>
-            <h3 data-i18n="ex3.title">Inventory · El Desierto Hardware</h3>
+            <h3 data-i18n="ex3.title">Inventory · High Desert Hardware</h3>
             <p data-i18n="ex3.text">A working app: stock levels, inventory value, restock alerts and adding products. Spanish and English.</p>
             <a class="btn btn-outline ex-cta" href="ejemplos/inventario/" target="_blank" rel="noopener"><span data-i18n="ex.view">View live example</span> <span aria-hidden="true">↗</span></a>
           </div>
           <div class="cf-c" data-i="3" hidden>
             <span class="tag" data-i18n="app.tag">App concept</span>
-            <h3 data-i18n="app1.title">Appointments · La Mesilla Barbershop</h3>
-            <p data-i18n="app1.text">Online booking: customers choose a service, a day and an open time, and the appointment lands in your calendar.</p>
+            <h3 data-i18n="app1.title">Appointments · Mesilla Valley Wellness</h3>
+            <p data-i18n="app1.text">Online booking for a yoga and massage studio: clients choose a service, a day and an open time, and the appointment lands in your calendar.</p>
             
           </div>
           <div class="cf-c" data-i="4" hidden>
             <span class="tag" data-i18n="app.tag">App concept</span>
-            <h3 data-i18n="app2.title">Quotes · Techos del Valle</h3>
+            <h3 data-i18n="app2.title">Quotes · Summit Roofing Co.</h3>
             <p data-i18n="app2.text">Quote calculator for a roofing company: materials, labor and margin, with a total ready to send to the client.</p>
             
           </div>
           <div class="cf-c" data-i="5" hidden>
             <span class="tag" data-i18n="app.tag">App concept</span>
-            <h3 data-i18n="app3.title">Project dashboard · Constructora Los Órganos</h3>
+            <h3 data-i18n="app3.title">Project dashboard · Rio Grande Builders</h3>
             <p data-i18n="app3.text">Progress, open tasks, budget and materials for a construction project, all on one screen.</p>
             
           </div>
