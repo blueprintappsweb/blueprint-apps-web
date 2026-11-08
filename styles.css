@@ -867,15 +867,16 @@ html.js .type-in:not([data-typed]){visibility:hidden}
 @media (max-width:720px){.cf-stage{-webkit-mask-image:none;mask-image:none}}
 
 
-/* Fotos de mesa de diseño: Nosotros y Preguntas */
-.about-art{max-width:420px}
-.about-art::before{display:none}
-.about-art figure{margin:0;overflow:hidden;background:#dfe6f0}
-.about-art img,.faq-photo img{display:block;width:100%;height:100%;object-fit:cover}
-.ab-main{border-radius:28px;aspect-ratio:4/5;box-shadow:var(--shadow-lg)}
-.ab-small{position:absolute;width:52%;aspect-ratio:4/3;right:-14%;bottom:-9%;border-radius:18px;border:6px solid var(--sand-hi,#FBF6EC);box-shadow:var(--shadow-lg)}
-.about-art .ab-logo{position:absolute;top:-22px;left:-22px;width:84px;height:84px;border-radius:20px;transform:rotate(-6deg);box-shadow:var(--shadow-lg)}
-.about-art .pin{right:auto;left:-14px;bottom:22px}
-.faq-photo{margin:32px 0 0;border-radius:22px;overflow:hidden;aspect-ratio:4/3;box-shadow:var(--shadow-lg);background:#dfe6f0}
-@media (max-width:920px){.about-art{max-width:300px}.ab-small{right:-10%}.faq-photo{aspect-ratio:16/9;margin-top:24px}}
-@media (max-width:520px){.about-art{max-width:250px;margin-left:12px}.ab-small{right:-14%}}
+/* Fotos de mesa de diseño en los espacios libres */
+#servicios,#antes-despues{position:relative}
+.side-photo{display:none;position:absolute;margin:0;border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(11,37,69,.45);background:#dfe6f0}
+.side-photo img,.faq-photo img{display:block;width:100%;height:100%;object-fit:cover}
+@media (min-width:1200px){
+  .sp-serv{display:block;top:28px;right:max(24px,calc((100vw - 1160px)/2 - 120px));width:min(470px,calc(50vw - 200px));aspect-ratio:1.6}
+}
+@media (min-width:1320px){
+  .sp-ba{display:block;top:28px;right:max(24px,calc((100vw - 1160px)/2 - 120px));width:min(350px,calc((100vw - 700px)/2 - 70px));aspect-ratio:1/1}
+}
+.faq-photo{margin:36px 0 0;border-radius:20px;overflow:hidden;aspect-ratio:1.85;max-width:480px;box-shadow:0 30px 60px -30px rgba(11,37,69,.45);background:#dfe6f0}
+@media (min-width:1300px){.faq-photo{margin-left:-60px}}
+@media (max-width:920px){.faq-photo{max-width:none;margin-top:24px}}
