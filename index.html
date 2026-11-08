@@ -27,9 +27,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=17">
+<link rel="stylesheet" href="styles.css?v=18">
 <script>(function(d){d.classList.add('js');var l=null;try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('bp-lang')}catch(e){}if(!l){var n=(navigator.languages&&navigator.languages[0])||navigator.language||'';l=n.toLowerCase().indexOf('es')===0?'es':'en'}if(l==='es'){d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},800)}})(document.documentElement)</script>
-<script src="script.js?v=16" defer></script>
+<script src="script.js?v=17" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -179,11 +179,6 @@
           <path d="M0 0 L0 22 L6 16.5 L10 26 L14 24.2 L10 15 L17.5 15 Z"/>
         </g>
       </svg>
-      <div class="hero-photos">
-        <figure class="hp1"><img src="https://images.unsplash.com/photo-1603901622056-0a5bee231395?w=640&h=480&fit=crop&q=72&auto=format" alt="" width="640" height="480" decoding="async"></figure>
-        <figure class="hp2"><img src="https://images.unsplash.com/photo-1571417785136-c723e7346a3d?w=640&h=480&fit=crop&q=72&auto=format" alt="" width="640" height="480" decoding="async"></figure>
-        <figure class="hp3"><img src="https://images.unsplash.com/photo-1764740109279-c7a8abd78821?w=640&h=480&fit=crop&q=72&auto=format" alt="" width="640" height="480" decoding="async"></figure>
-      </div>
     </div>
   </div>
   <a href="#servicios" class="scroll-hint" aria-label="Scroll down" data-i18n-aria="hero.down"><span></span></a>
@@ -701,6 +696,7 @@
       <p class="eyebrow" data-i18n="faq.eyebrow">Frequently asked questions</p>
       <h2 data-i18n="faq.title">What people ask us most</h2>
       <p class="lead-dark type-in" data-i18n="faq.lead">Short, clear answers. If your question isn't here, send us a message.</p>
+      <figure class="faq-photo"><img src="https://images.unsplash.com/photo-1571417785136-c723e7346a3d?w=800&h=600&fit=crop&q=72&auto=format" alt="" width="800" height="600" loading="lazy" decoding="async"></figure>
     </div>
     <div class="faq reveal">
       <details>
@@ -735,7 +731,9 @@
 <section id="nosotros" class="section">
   <div class="container about">
     <div class="about-art reveal" aria-hidden="true">
-      <svg viewBox="0 0 64 64">
+      <figure class="ab-main"><img src="https://images.unsplash.com/photo-1603901622056-0a5bee231395?w=720&h=900&fit=crop&q=72&auto=format" alt="" width="720" height="900" loading="lazy" decoding="async"></figure>
+      <figure class="ab-small"><img src="https://images.unsplash.com/photo-1764740109279-c7a8abd78821?w=560&h=420&fit=crop&q=72&auto=format" alt="" width="560" height="420" loading="lazy" decoding="async"></figure>
+      <svg class="ab-logo" viewBox="0 0 64 64">
         <rect width="64" height="64" rx="14" fill="#0B2545"/>
         <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5">
           <path d="M19 21 L10 32 L19 43" stroke="#F2A33A"/>

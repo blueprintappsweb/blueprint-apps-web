@@ -530,7 +530,24 @@ const TELEFONO = "15753125030";
     } catch (e) {}
   });
 
-  /* La portada se dibuja una sola vez y se queda completa */
+  /* Repetir la animación de la portada mientras se ve en pantalla */
+  const plan = $(".plan");
+  if (plan && !reduceMotion.matches) {
+    let planVisible = true;
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(([en]) => { planVisible = en.isIntersecting; }).observe(plan);
+    }
+    setInterval(() => {
+      if (!planVisible || document.hidden) return;
+      plan.classList.add("out");
+      setTimeout(() => {
+        plan.classList.remove("play");
+        void plan.getBoundingClientRect();   // reinicia las animaciones
+        plan.classList.add("play");
+        plan.classList.remove("out");
+      }, 600);
+    }, 8500);
+  }
 
   /* =========================================================
      Aparición al hacer scroll
