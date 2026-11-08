@@ -111,18 +111,15 @@ const TELEFONO = "15753125030";
     "ba.cta": "Quiero mi página nueva",
     "ex.eyebrow": "Ejemplos",
     "ex.title": "Ejemplos de nuestro trabajo",
-    "ex.lead": "Páginas y apps que diseñamos. Abre los ejemplos en vivo y recórrelos, también en tu celular.",
-    "ex1.tag": "Iglesia",
-    "ex1.title": "Iglesia Grace Community",
-    "ex1.text": "Horarios, transmisión en vivo, eventos, peticiones de oración y donaciones en línea.",
-    "ex.view": "Ver ejemplo en vivo",
-    "ex2.tag": "Negocio",
-    "ex2.title": "Sol del Valle Auto Repair",
-    "ex2.text": "Página bilingüe para un taller mecánico: servicios con precios, horario y formulario para agendar cita.",
-    "ex3.tag": "App",
+    "ex.lead": "Proyectos reales que ya se usan y apps de muestra que puedes probar. Ábrelos y explóralos, también en tu celular.",
+    "ex1.title": "Iglesia Fuente de Vida · Las Cruces",
+    "ex1.text": "Página bilingüe para una iglesia local: horarios con cuenta regresiva al próximo servicio, eventos, peticiones de oración y chat.",
+    "ex2.title": "App del equipo de alabanza · Fuente de Vida",
+    "ex2.text": "Los músicos de la iglesia la usan cada semana: más de 200 cantos con acordes que cambian de tono, listas para el domingo, calendario de turnos y chat del equipo. Funciona en el celular, incluso sin internet.",
+    "ex3.tag": "App de demostración",
     "ex3.title": "Inventario · High Desert Hardware",
     "ex3.text": "App que funciona: existencias, valor del inventario, alertas de resurtido y alta de productos. Español e inglés.",
-    "ex.note": "Los negocios y datos de los ejemplos son ficticios.",
+    "ex.note": "La página de la iglesia y la app de alabanza son proyectos reales en uso. Los demás negocios y sus datos son ejemplos ficticios.",
     "pr.eyebrow": "Precios",
     "pr.title": "Precios claros, sin sorpresas",
     "pr.lead": "Cada proyecto es diferente, pero aquí tienes un punto de partida. La cotización es gratis.",
@@ -130,23 +127,23 @@ const TELEFONO = "15753125030";
     "promo.text": "30% de descuento para nuestros <b>primeros 3 clientes</b> a cambio de una reseña en Google.",
     "promo.btn": "Quiero mi lugar",
     "pr.from": "desde",
-    "pr.1.d": "Una página sencilla y profesional para empezar ya.",
+    "pr.1.d": "Para estar en internet rápido: una página profesional con tu información y botones para contactarte.",
     "pr.1.a": "1 página tipo landing",
     "pr.1.b": "Botones de llamar y WhatsApp",
-    "pr.1.c": "Lista en pocos días",
+    "pr.1.c": "Se ve muy bien en el celular",
     "pr.cta": "Cotizar",
     "pr.2.t": "Básica",
-    "pr.2.d": "Lo esencial para un negocio o una iglesia.",
+    "pr.2.d": "Para un negocio o iglesia que necesita pocas páginas: servicios, horario, mapa y contacto.",
     "pr.2.a": "Hasta 4 secciones o páginas",
     "pr.2.b": "Formulario de contacto",
     "pr.2.c": "Mapa y horarios",
     "pr.pop": "Más popular",
     "pr.3.t": "Completa",
-    "pr.3.d": "Un sitio completo para crecer.",
+    "pr.3.d": "Para negocios con más que mostrar: más páginas, galería o menú, y en dos idiomas.",
     "pr.3.a": "Hasta 8 páginas",
     "pr.3.b": "Galería, eventos o menú",
     "pr.3.c": "En español e inglés",
-    "pr.4.d": "Una herramienta a la medida de tu operación.",
+    "pr.4.d": "Para dejar las hojas de Excel y el papel: una herramienta hecha a la medida de cómo trabaja tu equipo.",
     "pr.4.a": "Inventario, citas o pedidos",
     "pr.4.b": "Funciona en celular y computadora",
     "pr.4.c": "Capacitación para tu equipo",
@@ -346,6 +343,33 @@ const TELEFONO = "15753125030";
     "inv.s4": "Valor del inventario",
     "inv.hc": "Categoría",
     "inv.hv": "Valor",
+    "real.tag": "Proyecto real",
+    "ex.visit": "Visitar la página",
+    "ex2.private": "App privada del equipo. Pídenos una demostración.",
+    "ex.try": "Pruébala en esta página",
+    "pr.1.time": "Lista en 3 a 5 días",
+    "pr.2.time": "Lista en 1 a 2 semanas",
+    "pr.3.time": "Lista en 2 a 4 semanas",
+    "pr.4.time": "Lista en 4 a 8 semanas",
+    "ct.opt": "(opcional)",
+    "ct.choose": "Elige una opción",
+    "ct.type": "Tipo de negocio",
+    "ct.t1": "Negocio local",
+    "ct.t2": "Iglesia o ministerio",
+    "ct.t3": "Restaurante o comida",
+    "ct.t4": "Construcción u oficios",
+    "ct.t5": "Salud o belleza",
+    "ct.t6": "Otro",
+    "ct.when": "¿Para cuándo lo necesitas?",
+    "ct.w1": "Lo antes posible",
+    "ct.w2": "En 1 a 2 meses",
+    "ct.w3": "Solo estoy explorando",
+    "ct.budget": "Presupuesto aproximado",
+    "ct.b1": "Menos de $500",
+    "ct.b2": "$500 a $1,000",
+    "ct.b3": "$1,000 a $2,000",
+    "ct.b4": "Más de $2,000",
+    "ct.b5": "No sé todavía",
     "foot.made": "Hecho en Las Cruces, NM",
     "inv.search": "Buscar producto o código…",
     "ct.needPh": "Ej.: una página para mi taller con botón de WhatsApp…",
@@ -506,24 +530,7 @@ const TELEFONO = "15753125030";
     } catch (e) {}
   });
 
-  /* Repetir la animación de la portada mientras se ve en pantalla */
-  const plan = $(".plan");
-  if (plan && !reduceMotion.matches) {
-    let planVisible = true;
-    if ("IntersectionObserver" in window) {
-      new IntersectionObserver(([en]) => { planVisible = en.isIntersecting; }).observe(plan);
-    }
-    setInterval(() => {
-      if (!planVisible || document.hidden) return;
-      plan.classList.add("out");
-      setTimeout(() => {
-        plan.classList.remove("play");
-        void plan.getBoundingClientRect();   // reinicia las animaciones
-        plan.classList.add("play");
-        plan.classList.remove("out");
-      }, 600);
-    }, 8500);
-  }
+  /* La portada se dibuja una sola vez y se queda completa */
 
   /* =========================================================
      Aparición al hacer scroll
@@ -782,45 +789,41 @@ const TELEFONO = "15753125030";
   }
 
   /* =========================================================
-     Carrusel 3D de ejemplos (gira solo)
+     Carrusel 3D de ejemplos (se mueve solo cuando el visitante lo pide)
      ========================================================= */
   (function () {
     const cf = $("#cf"); if (!cf) return;
     const slides = $$(".cf-slide", cf), caps = $$(".cf-c", cf), dots = $$(".cf-dots i", cf), tabs = $$(".cf-tabs button", cf);
-    const n = slides.length; let cur = 0, timer = null, visible = false;
+    const n = slides.length; let cur = 0;
     function render() {
+      const narrow = matchMedia("(max-width:720px)").matches;
       slides.forEach((s, i) => {
         let o = ((i - cur) % n + n) % n; if (o > n / 2) o -= n;
         const a = Math.abs(o);
-        s.style.transform = `translateX(-50%) translateX(${o * 58}%) rotateY(${-o * 30}deg) scale(${1 - a * 0.15})`;
+        s.style.transform = `translateX(-50%) translateX(${o * 47}%) rotateY(${-o * 26}deg) scale(${1 - a * 0.24})`;
         s.style.zIndex = String(10 - a);
-        s.style.opacity = a > 1 ? "0" : (a ? ".6" : "1");
+        s.style.opacity = a > 1 || (narrow && a) ? "0" : (a ? ".55" : "1");
+        s.style.pointerEvents = a > 1 || (narrow && a) ? "none" : "";
         s.classList.toggle("is-side", a !== 0);
         s.setAttribute("aria-hidden", String(a !== 0));
       });
       caps.forEach((c, i) => { c.hidden = i !== cur; });
       dots.forEach((d, i) => d.classList.toggle("on", i === cur));
-      const onApps = cur >= 2;
-      tabs.forEach(t => t.setAttribute("aria-pressed", String((t.dataset.go === "2") === onApps)));
+      const onApps = cur >= 1;
+      tabs.forEach(t => t.setAttribute("aria-pressed", String((t.dataset.go === "1") === onApps)));
     }
     function go(i) { cur = (i + n) % n; render(); }
-    function stop() { clearInterval(timer); timer = null; }
-    function play() { if (reduceMotion.matches || !visible) return; stop(); timer = setInterval(() => { if (!document.hidden) go(cur + 1); }, 4500); }
-    $(".prev", cf).addEventListener("click", () => { go(cur - 1); play(); });
-    $(".next", cf).addEventListener("click", () => { go(cur + 1); play(); });
-    tabs.forEach(t => t.addEventListener("click", () => { go(+t.dataset.go); play(); }));
-    dots.forEach((d, i) => d.addEventListener("click", () => { go(i); play(); }));
-    slides.forEach((s, i) => s.addEventListener("click", () => { if (i !== cur) { go(i); play(); } }));
+    $(".prev", cf).addEventListener("click", () => go(cur - 1));
+    $(".next", cf).addEventListener("click", () => go(cur + 1));
+    tabs.forEach(t => t.addEventListener("click", () => go(+t.dataset.go)));
+    dots.forEach((d, i) => d.addEventListener("click", () => go(i)));
+    slides.forEach((s, i) => s.addEventListener("click", () => { if (i !== cur) go(i); }));
     const view = $(".cf-view", cf);
-    view.addEventListener("mouseenter", stop); view.addEventListener("mouseleave", play);
-    cf.addEventListener("focusin", stop); cf.addEventListener("focusout", play);
     let x0 = null;
-    view.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; stop(); }, { passive: true });
-    view.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1)); x0 = null; play(); });
-    cf.addEventListener("keydown", e => { if (e.key === "ArrowRight") { go(cur + 1); play(); } if (e.key === "ArrowLeft") { go(cur - 1); play(); } });
-    if ("IntersectionObserver" in window) {
-      new IntersectionObserver(([en]) => { visible = en.isIntersecting; visible ? play() : stop(); }, { threshold: 0.3 }).observe(cf);
-    } else { visible = true; play(); }
+    view.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, { passive: true });
+    view.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1)); x0 = null; });
+    cf.addEventListener("keydown", e => { if (e.key === "ArrowRight") go(cur + 1); if (e.key === "ArrowLeft") go(cur - 1); });
+    addEventListener("resize", render);
     render();
   })();
 
@@ -870,6 +873,9 @@ const TELEFONO = "15753125030";
         ...(correo ? { email: correo } : {}),
         "Teléfono o correo": contacto,
         "Qué necesita": mensaje,
+        "Tipo de negocio": (fd.get("tipo") || "—").toString(),
+        "Para cuándo": (fd.get("cuando") || "—").toString(),
+        "Presupuesto": (fd.get("presupuesto") || "—").toString(),
         "Idioma de la página": lang === "en" ? "Inglés" : "Español",
         botcheck: ""
       })

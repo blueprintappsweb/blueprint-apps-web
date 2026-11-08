@@ -30,6 +30,6 @@ Every project includes: mobile-friendly design, fast loading, basic local SEO, c
 
 - [Home (English)](https://blueprintappsweb.com/)
 - [Inicio (español)](https://blueprintappsweb.com/?lang=es)
-- [Example: church website (fictional)](https://blueprintappsweb.com/ejemplos/iglesia/)
-- [Example: auto repair website (fictional)](https://blueprintappsweb.com/ejemplos/taller/)
-- [Example: inventory app (fictional)](https://blueprintappsweb.com/ejemplos/inventario/)
+- [Real project: Fountain of Life Church website, Las Cruces](https://asadiaz2016-creator.github.io/fuente-de-vida/)
+- Real project: worship team app for Fountain of Life Church (private; songs with chords, setlists, rotation calendar, team chat)
+- [Demo: inventory app (fictional store)](https://blueprintappsweb.com/#demo)

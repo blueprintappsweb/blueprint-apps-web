@@ -27,9 +27,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=14">
+<link rel="stylesheet" href="styles.css?v=15">
 <script>(function(d){d.classList.add('js');var l=null;try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('bp-lang')}catch(e){}if(!l){var n=(navigator.languages&&navigator.languages[0])||navigator.language||'';l=n.toLowerCase().indexOf('es')===0?'es':'en'}if(l==='es'){d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},800)}})(document.documentElement)</script>
-<script src="script.js?v=15" defer></script>
+<script src="script.js?v=16" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -124,7 +124,7 @@
     <div class="hero-copy">
       <p class="eyebrow light" data-i18n="hero.eyebrow">Web design in Las Cruces, NM</p>
       <h1 data-i18n="hero.title">Custom websites and apps for businesses and churches</h1>
-      <p class="lead type-in" data-i18n="hero.lead">Fast, modern, easy-to-use sites so your customers and your congregation can find you, trust you and reach you.</p>
+      <p class="lead" data-i18n="hero.lead">Fast, modern, easy-to-use sites so your customers and your congregation can find you, trust you and reach you.</p>
       <div class="btns">
         <a class="btn btn-primary" href="#contacto" data-i18n="hero.cta1">Get your free quote</a>
         <a class="btn btn-ghost" href="#ejemplos" data-i18n="hero.cta2">See examples</a>
@@ -396,17 +396,17 @@
     <div class="section-head reveal">
       <p class="eyebrow"><span data-i18n="ex.eyebrow">Examples</span></p>
       <h2 data-i18n="ex.title">Examples of our work</h2>
-      <p class="lead-dark type-in" data-i18n="ex.lead">Websites and apps we design. Open the live examples and click around, on your phone too.</p>
+      <p class="lead-dark type-in" data-i18n="ex.lead">Real projects already in use, plus sample apps you can try. Open them and click around, on your phone too.</p>
     </div>
     <div class="cf reveal" id="cf" aria-roledescription="carousel" aria-label="Examples of our work" data-i18n-aria="cf.label">
       <div class="cf-tabs" role="group" aria-label="Type of example" data-i18n-aria="cf.type">
         <button type="button" data-go="0" aria-pressed="true" data-i18n="cf.sites">Websites</button>
-        <button type="button" data-go="2" aria-pressed="false" data-i18n="cf.apps">Custom apps</button>
+        <button type="button" data-go="1" aria-pressed="false" data-i18n="cf.apps">Custom apps</button>
       </div>
       <div class="cf-view">
         <div class="cf-stage">
-          <figure class="cf-slide" data-i="0"><div class="cf-shot"><span class="ex-bar"><i></i><i></i><i></i></span><img src="img/ejemplo-iglesia.jpg" alt="" width="880" height="550" loading="lazy" decoding="async"></div></figure>
-          <figure class="cf-slide" data-i="1"><div class="cf-shot"><span class="ex-bar"><i></i><i></i><i></i></span><img src="img/ejemplo-taller.jpg" alt="" width="880" height="550" loading="lazy" decoding="async"></div></figure>
+          <figure class="cf-slide" data-i="0"><div class="cf-shot"><span class="ex-bar"><i></i><i></i><i></i></span><img src="img/proyecto-fuente-de-vida.jpg" alt="" width="880" height="550" loading="lazy" decoding="async"></div></figure>
+          <figure class="cf-slide" data-i="1"><div class="cf-shot no-bar"><img src="img/proyecto-alabanza.jpg" alt="" width="880" height="550" loading="lazy" decoding="async"></div></figure>
           <figure class="cf-slide" data-i="2"><div class="cf-shot"><span class="ex-bar"><i></i><i></i><i></i></span><img src="img/ejemplo-inventario.jpg" alt="" width="880" height="550" loading="lazy" decoding="async"></div></figure>
           <figure class="cf-slide" data-i="3"><div class="cf-shot is-mk"><div class="mk mk-book" aria-hidden="true">
   <aside class="bk-side">
@@ -533,22 +533,22 @@
       <div class="cf-dots" aria-hidden="true"><i data-i="0"></i><i data-i="1"></i><i data-i="2"></i><i data-i="3"></i><i data-i="4"></i><i data-i="5"></i></div>
       <div class="cf-caps" aria-live="polite">
           <div class="cf-c" data-i="0">
-            <span class="tag" data-i18n="ex1.tag">Church</span>
-            <h3 data-i18n="ex1.title">Grace Community Church</h3>
-            <p data-i18n="ex1.text">Service times, live stream, events, prayer requests and online giving.</p>
-            <a class="btn btn-outline ex-cta" href="ejemplos/iglesia/" target="_blank" rel="noopener"><span data-i18n="ex.view">View live example</span> <span aria-hidden="true">↗</span></a>
+            <span class="tag real" data-i18n="real.tag">Real project</span>
+            <h3 data-i18n="ex1.title">Fountain of Life Church · Las Cruces</h3>
+            <p data-i18n="ex1.text">Bilingual website for a local church: service times with a countdown to the next service, events, prayer requests and chat.</p>
+            <a class="btn btn-outline ex-cta" href="https://asadiaz2016-creator.github.io/fuente-de-vida/" target="_blank" rel="noopener"><span data-i18n="ex.visit">Visit the website</span> <span aria-hidden="true">↗</span></a>
           </div>
           <div class="cf-c" data-i="1" hidden>
-            <span class="tag" data-i18n="ex2.tag">Business</span>
-            <h3 data-i18n="ex2.title">Sol del Valle Auto Repair</h3>
-            <p data-i18n="ex2.text">Bilingual website for an auto shop: services with prices, hours and an appointment form.</p>
-            <a class="btn btn-outline ex-cta" href="ejemplos/taller/" target="_blank" rel="noopener"><span data-i18n="ex.view">View live example</span> <span aria-hidden="true">↗</span></a>
+            <span class="tag real" data-i18n="real.tag">Real project</span>
+            <h3 data-i18n="ex2.title">Worship team app · Fountain of Life</h3>
+            <p data-i18n="ex2.text">The church musicians use it every week: more than 200 songs with chords that change key, Sunday setlists, rotation calendar and team chat. Works on phones, even offline.</p>
+            <p class="ex-private" data-i18n="ex2.private">Private app for the team. Ask us for a demo.</p>
           </div>
           <div class="cf-c" data-i="2" hidden>
-            <span class="tag" data-i18n="ex3.tag">App</span>
+            <span class="tag" data-i18n="ex3.tag">Demo app</span>
             <h3 data-i18n="ex3.title">Inventory · High Desert Hardware</h3>
             <p data-i18n="ex3.text">A working app: stock levels, inventory value, restock alerts and adding products. Spanish and English.</p>
-            <a class="btn btn-outline ex-cta" href="ejemplos/inventario/" target="_blank" rel="noopener"><span data-i18n="ex.view">View live example</span> <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline ex-cta" href="#demo"><span data-i18n="ex.try">Try it on this page</span> <span aria-hidden="true">↑</span></a>
           </div>
           <div class="cf-c" data-i="3" hidden>
             <span class="tag" data-i18n="app.tag">App concept</span>
@@ -570,7 +570,7 @@
           </div>
       </div>
     </div>
-    <p class="ex-note reveal" data-i18n="ex.note">The businesses and data in these examples are fictional.</p>
+    <p class="ex-note reveal" data-i18n="ex.note">The church website and the worship app are real projects in use. The other businesses and their data are fictional examples.</p>
   </div>
 </section>
 
@@ -596,18 +596,20 @@
       <article class="price reveal" style="--i:0">
         <h3>Express</h3>
         <p class="amount"><small data-i18n="pr.from">from</small> $275</p>
-        <p class="pdesc" data-i18n="pr.1.d">A simple, professional page to get started now.</p>
+        <p class="ptime"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="pr.1.time">Ready in 3–5 days</span></p>
+<p class="pdesc" data-i18n="pr.1.d">For getting online fast: one professional page with your info and buttons to reach you.</p>
         <ul>
           <li data-i18n="pr.1.a">1 landing page</li>
           <li data-i18n="pr.1.b">Call and WhatsApp buttons</li>
-          <li data-i18n="pr.1.c">Ready in a few days</li>
+          <li data-i18n="pr.1.c">Looks great on phones</li>
         </ul>
         <a href="#contacto" class="btn btn-outline" data-plan="Express" data-i18n="pr.cta">Get a quote</a>
       </article>
       <article class="price reveal" style="--i:1">
         <h3 data-i18n="pr.2.t">Basic</h3>
         <p class="amount"><small data-i18n="pr.from">from</small> $500</p>
-        <p class="pdesc" data-i18n="pr.2.d">The essentials for a business or a church.</p>
+        <p class="ptime"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="pr.2.time">Ready in 1–2 weeks</span></p>
+<p class="pdesc" data-i18n="pr.2.d">For a small business or church that needs a few pages: services, hours, map and contact.</p>
         <ul>
           <li data-i18n="pr.2.a">Up to 4 sections or pages</li>
           <li data-i18n="pr.2.b">Contact form</li>
@@ -619,7 +621,8 @@
         <span class="ribbon" data-i18n="pr.pop">Most popular</span>
         <h3 data-i18n="pr.3.t">Complete</h3>
         <p class="amount"><small data-i18n="pr.from">from</small> $950</p>
-        <p class="pdesc" data-i18n="pr.3.d">A full website built to grow.</p>
+        <p class="ptime"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="pr.3.time">Ready in 2–4 weeks</span></p>
+<p class="pdesc" data-i18n="pr.3.d">For businesses with more to show: more pages, a gallery or menu, and both languages.</p>
         <ul>
           <li data-i18n="pr.3.a">Up to 8 pages</li>
           <li data-i18n="pr.3.b">Gallery, events or menu</li>
@@ -630,7 +633,8 @@
       <article class="price reveal" style="--i:3">
         <h3>App</h3>
         <p class="amount"><small data-i18n="pr.from">from</small> $1,200</p>
-        <p class="pdesc" data-i18n="pr.4.d">A tool tailored to your operation.</p>
+        <p class="ptime"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="pr.4.time">Ready in 4–8 weeks</span></p>
+<p class="pdesc" data-i18n="pr.4.d">For replacing spreadsheets and paper: a tool built around how your team works.</p>
         <ul>
           <li data-i18n="pr.4.a">Inventory, appointments or orders</li>
           <li data-i18n="pr.4.b">Works on phone and computer</li>
@@ -800,6 +804,40 @@
       <div class="field">
         <label for="f-contacto" data-i18n="ct.contact">Phone or email</label>
         <input id="f-contacto" name="contacto" type="text" autocomplete="email" required>
+      </div>
+<div class="field-row">
+      <div class="field">
+        <label for="f-tipo"><span data-i18n="ct.type">Type of business</span> <small data-i18n="ct.opt">(optional)</small></label>
+        <select id="f-tipo" name="tipo">
+          <option value="" data-i18n="ct.choose">Choose one</option>
+          <option value="Negocio local" data-i18n="ct.t1">Local business</option>
+          <option value="Iglesia o ministerio" data-i18n="ct.t2">Church or ministry</option>
+          <option value="Restaurante o comida" data-i18n="ct.t3">Restaurant or food</option>
+          <option value="Construcción u oficios" data-i18n="ct.t4">Construction or trades</option>
+          <option value="Salud o belleza" data-i18n="ct.t5">Health or beauty</option>
+          <option value="Otro" data-i18n="ct.t6">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-cuando"><span data-i18n="ct.when">When do you need it?</span> <small data-i18n="ct.opt">(optional)</small></label>
+        <select id="f-cuando" name="cuando">
+          <option value="" data-i18n="ct.choose">Choose one</option>
+          <option value="Lo antes posible" data-i18n="ct.w1">As soon as possible</option>
+          <option value="En 1 a 2 meses" data-i18n="ct.w2">In 1–2 months</option>
+          <option value="Solo estoy explorando" data-i18n="ct.w3">Just exploring</option>
+        </select>
+      </div>
+</div>
+      <div class="field">
+        <label for="f-presupuesto"><span data-i18n="ct.budget">Approximate budget</span> <small data-i18n="ct.opt">(optional)</small></label>
+        <select id="f-presupuesto" name="presupuesto">
+          <option value="" data-i18n="ct.choose">Choose one</option>
+          <option value="Menos de $500" data-i18n="ct.b1">Under $500</option>
+          <option value="$500 a $1,000" data-i18n="ct.b2">$500–$1,000</option>
+          <option value="$1,000 a $2,000" data-i18n="ct.b3">$1,000–$2,000</option>
+          <option value="Más de $2,000" data-i18n="ct.b4">Over $2,000</option>
+          <option value="No sé todavía" data-i18n="ct.b5">Not sure yet</option>
+        </select>
       </div>
       <div class="field">
         <label for="f-mensaje" data-i18n="ct.need">What do you need?</label>
