@@ -125,6 +125,8 @@ const TELEFONO = "15753125030";
     "pr.lead": "Cada proyecto es diferente, pero aquí tienes un punto de partida. La cotización es gratis.",
     "promo.title": "Oferta de lanzamiento",
     "promo.text": "30% de descuento para nuestros <b>primeros 3 clientes</b> a cambio de una reseña en Google.",
+    "promo.spots": "Quedan <b>3 de 3</b> lugares",
+    "promo.ends": "Termina el 31 de diciembre de 2026",
     "promo.btn": "Quiero mi lugar",
     "pr.from": "desde",
     "pr.1.d": "Para estar en internet rápido: una página profesional con tu información y botones para contactarte.",
@@ -804,6 +806,9 @@ const TELEFONO = "15753125030";
     }, { threshold: 0.55 });
     aio.observe(ba);
   }
+
+  /* La oferta de lanzamiento se oculta sola al terminar (31 dic 2026, hora de Las Cruces) */
+  if (Date.now() > Date.parse("2027-01-01T00:00:00-07:00")) $$(".promo").forEach(p => p.hidden = true);
 
   /* =========================================================
      Carrusel 3D de ejemplos (se mueve solo cuando el visitante lo pide)

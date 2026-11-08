@@ -880,3 +880,7 @@ html.js .type-in:not([data-typed]){visibility:hidden}
 .faq-photo{margin:36px 0 0;border-radius:20px;overflow:hidden;aspect-ratio:1.85;max-width:480px;box-shadow:0 30px 60px -30px rgba(11,37,69,.45);background:#dfe6f0}
 @media (min-width:1300px){.faq-photo{margin-left:-60px}}
 @media (max-width:920px){.faq-photo{max-width:none;margin-top:24px}}
+.promo-meta{display:flex;flex-wrap:wrap;gap:6px 10px;margin-top:8px!important;font-size:.9rem!important}
+.promo-meta span{background:rgba(11,37,69,.12);border-radius:999px;padding:3px 12px;font-weight:600}
+.promo[hidden]{display:none}
+@media (max-width:720px){.promo-meta{justify-content:center}}
