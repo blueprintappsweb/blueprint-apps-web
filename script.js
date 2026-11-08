@@ -73,7 +73,6 @@ const TELEFONO = "15753125030";
     "new.title": "Servicio confiable en Las Cruces, NM",
     "new.text": "Agenda en línea en menos de un minuto. Te confirmamos por WhatsApp.",
     "new.call": "Llamar",
-    "new.open": "Abierto hoy · 8:00 am – 6:00 pm",
     "new.f1": "Respuesta rápida",
     "new.f2": "Precios claros",
     "new.f3": "Garantía",
