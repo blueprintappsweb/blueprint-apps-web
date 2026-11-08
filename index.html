@@ -27,9 +27,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="styles.css?v=14">
 <script>(function(d){d.classList.add('js');var l=null;try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('bp-lang')}catch(e){}if(!l){var n=(navigator.languages&&navigator.languages[0])||navigator.language||'';l=n.toLowerCase().indexOf('es')===0?'es':'en'}if(l==='es'){d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},800)}})(document.documentElement)</script>
-<script src="script.js?v=13" defer></script>
+<script src="script.js?v=15" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -235,48 +235,61 @@
     </div>
 
     <div class="laptop reveal">
-      <div class="laptop-screen">
+      <div class="lp-lid">
+        <div class="lp-bezel">
+          <span class="lp-cam" aria-hidden="true"></span>
+          <div class="lp-screen">
         <div class="app" id="invApp">
-          <div class="app-bar">
-            <div class="app-title">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-              <strong data-i18n="inv.store">High Desert Hardware</strong>
+          <aside class="app-side" aria-hidden="true">
+            <div class="app-brand"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg><b><span data-i18n="inv.store">High Desert Hardware</span><small>Las Cruces, NM</small></b></div>
+            <ul class="app-nav"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg><span data-i18n="inv.n1">Dashboard</span></li><li class="on"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg><span data-i18n="inv.n2">Inventory</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M3 4h2l2.5 11h11L21 8H6.5"/></svg><span data-i18n="inv.n3">Orders</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg><span data-i18n="inv.n4">Suppliers</span></li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span data-i18n="inv.n5">Reports</span></li></ul>
+            <div class="app-user"><i>AT</i><span><b>Ana Torres</b><small data-i18n="inv.role">Store manager</small></span></div>
+          </aside>
+          <div class="app-main">
+            <div class="app-bar">
+              <div><h4 data-i18n="inv.title">Inventory</h4><small data-i18n="inv.sub">Stock updates in real time for the whole team.</small></div>
+              <div class="app-bar-r"><span class="live"><i></i><span data-i18n="inv.live">Live</span></span><span class="app-bell" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg><i></i></span></div>
             </div>
-            <span class="live"><i></i><span data-i18n="inv.live">Live</span></span>
-          </div>
 
-          <div class="app-stats">
-            <div class="stat"><span data-i18n="inv.s1">Products</span><b id="stItems">0</b></div>
-            <div class="stat"><span data-i18n="inv.s2">Units</span><b id="stUnits">0</b></div>
-            <div class="stat warn"><span data-i18n="inv.s3">To restock</span><b id="stLow">0</b></div>
-          </div>
+            <div class="app-stats">
+              <div class="stat"><span class="st-ic c1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg></span><span><span data-i18n="inv.s1">Products</span><b id="stItems">0</b></span></div>
+              <div class="stat"><span class="st-ic c2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4z"/><path d="M4 7l2-4h12l2 4M10 11h4"/></svg></span><span><span data-i18n="inv.s2">Units</span><b id="stUnits">0</b></span></div>
+              <div class="stat"><span class="st-ic c3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M16 7c0-1.7-1.8-3-4-3s-4 1.3-4 3 1.8 2.6 4 3 4 1.3 4 3-1.8 3-4 3-4-1.3-4-3"/></svg></span><span><span data-i18n="inv.s4">Inventory value</span><b id="stValue">$0</b></span></div>
+              <div class="stat warn"><span class="st-ic c4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18v.5"/></svg></span><span><span data-i18n="inv.s3">To restock</span><b id="stLow">0</b></span></div>
+            </div>
 
-          <div class="app-alert" id="invAlert" role="status" aria-live="polite"></div>
+            <div class="app-alert" id="invAlert" role="status" aria-live="polite"></div>
 
-          <div class="app-tools">
-            <label class="search">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-              <span class="sr-only" data-i18n="inv.searchLbl">Search</span>
-              <input id="invSearch" type="search" autocomplete="off" placeholder="Search product or code…" data-i18n-ph="inv.search">
-            </label>
-            <label class="toggle">
-              <input type="checkbox" id="invLow">
-              <span class="tg" aria-hidden="true"></span>
-              <span data-i18n="inv.only">Restock only</span>
-            </label>
-            <button type="button" class="reset" id="invReset" data-i18n="inv.reset">Reset</button>
+            <div class="app-table">
+              <div class="app-tools">
+                <label class="search">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+                  <span class="sr-only" data-i18n="inv.searchLbl">Search</span>
+                  <input id="invSearch" type="search" autocomplete="off" placeholder="Search product or code…" data-i18n-ph="inv.search">
+                </label>
+                <label class="toggle">
+                  <input type="checkbox" id="invLow">
+                  <span class="tg" aria-hidden="true"></span>
+                  <span data-i18n="inv.only">Restock only</span>
+                </label>
+                <button type="button" class="reset" id="invReset" data-i18n="inv.reset">Reset</button>
+              </div>
+              <div class="rows-head" aria-hidden="true">
+                <span data-i18n="inv.h1">Product</span>
+                <span data-i18n="inv.hc">Category</span>
+                <span data-i18n="inv.h3">In stock</span>
+                <span data-i18n="inv.hv">Value</span>
+                <span data-i18n="inv.h4">Status</span>
+              </div>
+              <ul class="rows" id="invList"></ul>
+            </div>
           </div>
-
-          <div class="rows-head" aria-hidden="true">
-            <span data-i18n="inv.h1">Product</span>
-            <span data-i18n="inv.h2">Minimum</span>
-            <span data-i18n="inv.h3">In stock</span>
-            <span data-i18n="inv.h4">Status</span>
+        </div>
           </div>
-          <ul class="rows" id="invList"></ul>
         </div>
       </div>
-      <div class="laptop-base"></div>
+      <div class="lp-base" aria-hidden="true"><span class="lp-notch"></span></div>
+      <div class="lp-shadow" aria-hidden="true"></div>
     </div>
     <p class="demo-note reveal" data-i18n="demo.note">Can you picture something like this for your business? We'll adapt it to your products, your team and the way you work.</p>
   </div>

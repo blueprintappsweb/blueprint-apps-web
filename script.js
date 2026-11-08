@@ -335,6 +335,17 @@ const TELEFONO = "15753125030";
     "pd.bund": "paquetes faltan",
     "pd.m8": "Tubo de cobre",
     "pd.ft": "pies faltan",
+    "inv.n1": "Panel",
+    "inv.n2": "Inventario",
+    "inv.n3": "Pedidos",
+    "inv.n4": "Proveedores",
+    "inv.n5": "Reportes",
+    "inv.role": "Gerente de tienda",
+    "inv.title": "Inventario",
+    "inv.sub": "Las existencias se actualizan al momento para todo el equipo.",
+    "inv.s4": "Valor del inventario",
+    "inv.hc": "Categoría",
+    "inv.hv": "Valor",
     "foot.made": "Hecho en Las Cruces, NM",
     "inv.search": "Buscar producto o código…",
     "ct.needPh": "Ej.: una página para mi taller con botón de WhatsApp…",
@@ -351,7 +362,7 @@ const TELEFONO = "15753125030";
     es: {
       langAria: "Switch to English",
       menuOpen: "Abrir menú", menuClose: "Cerrar menú",
-      min: "Mín.", ok: "OK", low: "Por resurtir",
+      min: "Mín.", ok: "OK", low: "Por resurtir", out: "Agotado",
       dec: "Restar uno a {n}", inc: "Sumar uno a {n}",
       alertLow: "<b>{c} {p} por resurtir:</b> {list}",
       prod1: "producto", prodN: "productos",
@@ -366,7 +377,7 @@ const TELEFONO = "15753125030";
     en: {
       langAria: "Cambiar a español",
       menuOpen: "Open menu", menuClose: "Close menu",
-      min: "Min.", ok: "OK", low: "Restock",
+      min: "Min.", ok: "OK", low: "Restock", out: "Out of stock",
       dec: "Remove one {n}", inc: "Add one {n}",
       alertLow: "<b>{c} {p} to restock:</b> {list}",
       prod1: "product", prodN: "products",
@@ -574,15 +585,29 @@ const TELEFONO = "15753125030";
   /* =========================================================
      DEMO: inventario
      ========================================================= */
+  // Íconos por categoría para la demo
+  const CAT_ICON = {
+    hw: '<path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/>',
+    el: '<path d="M13 2L5 14h6l-1 8 8-12h-6z"/>',
+    pt: '<path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/>',
+    gd: '<path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19c3-4 6-7 10-9"/>',
+    sf: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',
+    sl: '<path d="M8 3h8v4H8zM7 7h10v14H7z"/><path d="M10 12h4"/>'
+  };
+  const CATS = {
+    hw: { es: "Tornillería", en: "Hardware", c: "#1e56a0" }, el: { es: "Eléctrico", en: "Electrical", c: "#d97706" },
+    pt: { es: "Pintura", en: "Paint", c: "#7c3aed" }, gd: { es: "Jardín", en: "Garden", c: "#15803d" },
+    sf: { es: "Seguridad", en: "Safety", c: "#dc2626" }, sl: { es: "Selladores", en: "Sealants", c: "#0e7490" }
+  };
   const START = [
-    { id: 1, sku: "TOR-014", es: "Tornillos 1/4\" (caja)", en: "1/4\" screws (box)", qty: 42, min: 20 },
-    { id: 2, sku: "CIN-002", es: "Cinta de aislar negra", en: "Black electrical tape", qty: 8, min: 10 },
-    { id: 3, sku: "PIN-110", es: "Pintura blanca (galón)", en: "White paint (gallon)", qty: 4, min: 6 },
-    { id: 4, sku: "BRO-020", es: "Brocha de 2\"", en: "2\" paint brush", qty: 25, min: 10 },
-    { id: 5, sku: "LED-060", es: "Foco LED 60W", en: "60W LED bulb", qty: 13, min: 12 },
-    { id: 6, sku: "MAN-050", es: "Manguera de 50 ft", en: "50 ft garden hose", qty: 5, min: 4 },
-    { id: 7, sku: "GUA-007", es: "Guantes de trabajo", en: "Work gloves", qty: 30, min: 15 },
-    { id: 8, sku: "SIL-300", es: "Silicón transparente", en: "Clear silicone", qty: 9, min: 8 }
+    { id: 1, sku: "TOR-014", es: "Tornillos 1/4\" (caja)", en: "1/4\" screws (box)", cat: "hw", price: 8.99, qty: 42, min: 20 },
+    { id: 2, sku: "CIN-002", es: "Cinta de aislar negra", en: "Black electrical tape", cat: "el", price: 3.49, qty: 8, min: 10 },
+    { id: 3, sku: "PIN-110", es: "Pintura blanca (galón)", en: "White paint (gallon)", cat: "pt", price: 28.99, qty: 4, min: 6 },
+    { id: 4, sku: "BRO-020", es: "Brocha de 2\"", en: "2\" paint brush", cat: "pt", price: 6.49, qty: 25, min: 10 },
+    { id: 5, sku: "LED-060", es: "Foco LED 60W", en: "60W LED bulb", cat: "el", price: 4.99, qty: 13, min: 12 },
+    { id: 6, sku: "MAN-050", es: "Manguera de 50 ft", en: "50 ft garden hose", cat: "gd", price: 24.99, qty: 5, min: 4 },
+    { id: 7, sku: "GUA-007", es: "Guantes de trabajo", en: "Work gloves", cat: "sf", price: 9.99, qty: 30, min: 15 },
+    { id: 8, sku: "SIL-300", es: "Silicón transparente", en: "Clear silicone", cat: "sl", price: 7.49, qty: 9, min: 8 }
   ];
   let items = START.map(i => ({ ...i }));
   const list = $("#invList");
@@ -595,6 +620,7 @@ const TELEFONO = "15753125030";
   const isLow = i => i.qty <= i.min;
   const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
+  const money = v => v.toLocaleString(lang === "es" ? "es-MX" : "en-US", { style: "currency", currency: "USD", currencyDisplay: "narrowSymbol" });
   function renderInventory(focus) {
     if (!list) return;
     const q = norm(search.value.trim());
@@ -604,15 +630,23 @@ const TELEFONO = "15753125030";
 
     list.innerHTML = shown.length ? shown.map(i => {
       const name = esc(i[lang]);
-      return `<li class="row${isLow(i) ? " low" : ""}" data-id="${i.id}">
-        <div class="r-name"><strong>${name}</strong><span class="sku">${i.sku}</span></div>
-        <div class="r-min"><span class="r-lbl">${t("min")} </span>${i.min}</div>
-        <div class="r-qty">
-          <button type="button" data-act="dec" aria-label="${esc(t("dec", { n: i[lang] }))}">−</button>
-          <output aria-live="polite">${i.qty}</output>
-          <button type="button" data-act="inc" aria-label="${esc(t("inc", { n: i[lang] }))}">+</button>
+      const cat = CATS[i.cat] || CATS.hw;
+      const state = i.qty === 0 ? "out" : (isLow(i) ? "low" : "");
+      const pct = Math.min(100, Math.round(i.qty / Math.max(1, i.min * 2) * 100));
+      return `<li class="row${state ? " " + state : ""}" data-id="${i.id}" style="--c:${cat.c}">
+        <div class="r-name"><span class="thumb" aria-hidden="true"><svg viewBox="0 0 24 24">${CAT_ICON[i.cat] || CAT_ICON.hw}</svg></span><div><strong>${name}</strong><span class="sku">${i.sku}</span></div></div>
+        <div class="r-cat"><span class="cat">${cat[lang]}</span></div>
+        <div class="r-stock">
+          <div class="r-qty">
+            <button type="button" data-act="dec" aria-label="${esc(t("dec", { n: i[lang] }))}">−</button>
+            <output aria-live="polite">${i.qty}</output>
+            <button type="button" data-act="inc" aria-label="${esc(t("inc", { n: i[lang] }))}">+</button>
+          </div>
+          <span class="lvl" aria-hidden="true"><i style="width:${pct}%"></i></span>
+          <span class="r-min">${t("min")} ${i.min}</span>
         </div>
-        <div class="r-status"><span class="badge">${isLow(i) ? t("low") : t("ok")}</span></div>
+        <div class="r-val">${money(i.qty * i.price)}</div>
+        <div class="r-status"><span class="badge">${i.qty === 0 ? t("out") : (isLow(i) ? t("low") : t("ok"))}</span></div>
       </li>`;
     }).join("") : `<li class="empty">${t("empty")}</li>`;
 
@@ -621,6 +655,7 @@ const TELEFONO = "15753125030";
     $("#stItems").textContent = items.length;
     $("#stUnits").textContent = items.reduce((s, i) => s + i.qty, 0).toLocaleString(lang === "es" ? "es-MX" : "en-US");
     $("#stLow").textContent = low.length;
+    $("#stValue").textContent = money(items.reduce((sum, i) => sum + i.qty * i.price, 0));
     $("#stLow").parentElement.classList.toggle("zero", low.length === 0);
 
     // alerta
