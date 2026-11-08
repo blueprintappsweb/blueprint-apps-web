@@ -111,7 +111,7 @@ const TELEFONO = "15753125030";
     "ba.cta": "Quiero mi página nueva",
     "ex.eyebrow": "Ejemplos",
     "ex.title": "Ejemplos de nuestro trabajo",
-    "ex.lead": "Ábrelos y recórrelos: son páginas y apps que funcionan, también en tu celular.",
+    "ex.lead": "Páginas y apps que diseñamos. Abre los ejemplos en vivo y recórrelos, también en tu celular.",
     "ex1.tag": "Iglesia",
     "ex1.title": "Iglesia Comunidad de Gracia",
     "ex1.text": "Horarios, transmisión en vivo, eventos, peticiones de oración y donaciones en línea.",
@@ -221,6 +221,57 @@ const TELEFONO = "15753125030";
     "foot.tag": "Páginas web y apps a la medida para negocios e iglesias.",
     "ct.privacy": "Al enviar, aceptas nuestra <a href=\"privacy.html#es\">política de privacidad</a>.",
     "foot.privacy": "<a href=\"privacy.html#es\">Política de privacidad</a>",
+    "cf.label": "Ejemplos de nuestro trabajo",
+    "cf.type": "Tipo de ejemplo",
+    "cf.sites": "Páginas web",
+    "cf.apps": "Apps a la medida",
+    "cf.prev": "Ejemplo anterior",
+    "cf.next": "Ejemplo siguiente",
+    "app.tag": "Concepto de app",
+    "app1.title": "Citas · Barbería La Mesilla",
+    "app1.text": "Reservas en línea: el cliente elige el servicio, el día y una hora disponible, y la cita llega a tu calendario.",
+    "app2.title": "Cotizaciones · Techos del Valle",
+    "app2.text": "Cotizador para una empresa de techos: materiales, mano de obra y margen, con un total listo para enviar al cliente.",
+    "app3.title": "Panel de obra · Constructora Los Órganos",
+    "app3.text": "Avance, tareas pendientes, presupuesto y materiales de un proyecto de construcción, todo en una pantalla.",
+    "mk.s1": "Servicio",
+    "mk.s2": "Fecha y hora",
+    "mk.s3": "Tus datos",
+    "mk.s4": "Confirmar",
+    "mk.secure": "Tus datos están seguros",
+    "mk.book": "Agenda tu cita",
+    "mk.month": "Noviembre 2026",
+    "mk.days": "<span>D</span><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span>",
+    "mk.day": "Jueves 19 de nov.",
+    "mk.back": "Atrás",
+    "mk.cont": "Continuar",
+    "mk.q1": "Proyecto",
+    "mk.q2": "Materiales",
+    "mk.q3": "Mano de obra",
+    "mk.q4": "Resumen",
+    "mk.q": "Cotizador",
+    "mk.qname": "Nombre del proyecto",
+    "mk.qval": "Techo nuevo · Casa Rodríguez",
+    "mk.qclient": "Cliente",
+    "mk.qarea": "Área",
+    "mk.qcost": "Costo",
+    "mk.qmargin": "Margen",
+    "mk.qtotal": "Total cotizado",
+    "mk.qprofit": "Ganancia",
+    "mk.qsave": "Guardar",
+    "mk.qsend": "Enviar cotización",
+    "mk.p": "Panel del proyecto",
+    "mk.p1": "Tareas hechas",
+    "mk.p2": "Pendientes",
+    "mk.p3": "Avance",
+    "mk.p4": "Presupuesto usado",
+    "mk.ptasks": "Tareas",
+    "mk.pprog": "Avance por etapa",
+    "mk.pmat": "Materiales",
+    "mk.m1": "Concreto",
+    "mk.m2": "Vigas de acero",
+    "mk.m3": "Tablaroca",
+    "mk.m4": "Ventanas",
     "foot.made": "Hecho en Las Cruces, NM",
     "inv.search": "Buscar producto o código…",
     "ct.needPh": "Ej.: una página para mi taller con botón de WhatsApp…",
@@ -290,6 +341,7 @@ const TELEFONO = "15753125030";
   const t = (k, vars = {}) => STR[lang][k].replace(/\{(\w+)\}/g, (_, v) => vars[v] ?? "");
 
   function applyLang(l) {
+    if (typeof stopTyping === "function") stopTyping();
     lang = l;
     root.lang = l;
     $$("[data-i18n]").forEach(el => {
@@ -412,6 +464,47 @@ const TELEFONO = "15753125030";
       });
     }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
     reveals.forEach(el => io.observe(el));
+  }
+
+  /* =========================================================
+     Párrafos que se escriben solos al llegar a ellos
+     ========================================================= */
+  const typers = $$(".type-in");
+  const typing = new Map();
+  function stopTyping() {
+    typing.forEach((timer, el) => { clearInterval(timer); el.style.minHeight = ""; el.removeAttribute("aria-busy"); });
+    typing.clear();
+  }
+  function typeOut(el) {
+    if (el.dataset.typed) return;
+    el.dataset.typed = "1";
+    const full = el.textContent.replace(/\s+/g, " ").trim();
+    el.style.minHeight = el.offsetHeight + "px";      // evita que la página brinque
+    el.setAttribute("aria-busy", "true");
+    const txt = document.createTextNode("");
+    const caret = document.createElement("span");
+    caret.className = "caret"; caret.setAttribute("aria-hidden", "true");
+    el.textContent = ""; el.append(txt, caret);
+    const step = Math.max(1, Math.round(full.length / 110));   // ~2.2 s sin importar el largo
+    let i = 0;
+    const timer = setInterval(() => {
+      i = Math.min(full.length, i + step);
+      txt.data = full.slice(0, i);
+      if (i >= full.length) {
+        clearInterval(timer); typing.delete(el);
+        el.style.minHeight = ""; el.removeAttribute("aria-busy");
+        setTimeout(() => caret.remove(), 1200);
+      }
+    }, 20);
+    typing.set(el, timer);
+  }
+  if (reduceMotion.matches || !("IntersectionObserver" in window)) {
+    typers.forEach(el => { el.dataset.typed = "1"; });
+  } else {
+    const tio = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { typeOut(en.target); tio.unobserve(en.target); } });
+    }, { threshold: 0.4 });
+    typers.forEach(el => tio.observe(el));
   }
 
   /* =========================================================
@@ -588,6 +681,49 @@ const TELEFONO = "15753125030";
     }, { threshold: 0.55 });
     aio.observe(ba);
   }
+
+  /* =========================================================
+     Carrusel 3D de ejemplos (gira solo)
+     ========================================================= */
+  (function () {
+    const cf = $("#cf"); if (!cf) return;
+    const slides = $$(".cf-slide", cf), caps = $$(".cf-c", cf), dots = $$(".cf-dots i", cf), tabs = $$(".cf-tabs button", cf);
+    const n = slides.length; let cur = 0, timer = null, visible = false;
+    function render() {
+      slides.forEach((s, i) => {
+        let o = ((i - cur) % n + n) % n; if (o > n / 2) o -= n;
+        const a = Math.abs(o);
+        s.style.transform = `translateX(-50%) translateX(${o * 58}%) rotateY(${-o * 30}deg) scale(${1 - a * 0.15})`;
+        s.style.zIndex = String(10 - a);
+        s.style.opacity = a > 1 ? "0" : (a ? ".6" : "1");
+        s.classList.toggle("is-side", a !== 0);
+        s.setAttribute("aria-hidden", String(a !== 0));
+      });
+      caps.forEach((c, i) => { c.hidden = i !== cur; });
+      dots.forEach((d, i) => d.classList.toggle("on", i === cur));
+      const onApps = cur >= 2;
+      tabs.forEach(t => t.setAttribute("aria-pressed", String((t.dataset.go === "2") === onApps)));
+    }
+    function go(i) { cur = (i + n) % n; render(); }
+    function stop() { clearInterval(timer); timer = null; }
+    function play() { if (reduceMotion.matches || !visible) return; stop(); timer = setInterval(() => { if (!document.hidden) go(cur + 1); }, 4500); }
+    $(".prev", cf).addEventListener("click", () => { go(cur - 1); play(); });
+    $(".next", cf).addEventListener("click", () => { go(cur + 1); play(); });
+    tabs.forEach(t => t.addEventListener("click", () => { go(+t.dataset.go); play(); }));
+    dots.forEach((d, i) => d.addEventListener("click", () => { go(i); play(); }));
+    slides.forEach((s, i) => s.addEventListener("click", () => { if (i !== cur) { go(i); play(); } }));
+    const view = $(".cf-view", cf);
+    view.addEventListener("mouseenter", stop); view.addEventListener("mouseleave", play);
+    cf.addEventListener("focusin", stop); cf.addEventListener("focusout", play);
+    let x0 = null;
+    view.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    view.addEventListener("touchend", e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1)); x0 = null; play(); });
+    cf.addEventListener("keydown", e => { if (e.key === "ArrowRight") { go(cur + 1); play(); } if (e.key === "ArrowLeft") { go(cur - 1); play(); } });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(([en]) => { visible = en.isIntersecting; visible ? play() : stop(); }, { threshold: 0.3 }).observe(cf);
+    } else { visible = true; play(); }
+    render();
+  })();
 
   /* =========================================================
      Botones de precios → llenan el mensaje del formulario
