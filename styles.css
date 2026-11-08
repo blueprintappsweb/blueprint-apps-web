@@ -879,3 +879,4 @@ html.js .plan.play ~ .hero-photos .hp2{transition-delay:3.15s}
 html.js .plan.play ~ .hero-photos .hp3{transition-delay:3.4s}
 @media (max-width:900px){.hero-photos .hp1{right:0;top:-8%}.hero-photos .hp2{left:-2%;bottom:-10%}.hero-photos .hp3{right:-1%;bottom:-8%}}
 @media (prefers-reduced-motion:reduce){html.js .hero-photos figure{opacity:1;translate:none;transition:none}}
+@media (min-width:921px) and (max-width:1240px){.hero-photos .hp1{right:0}.hero-photos .hp3{right:-2%}}
