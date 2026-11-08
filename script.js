@@ -50,7 +50,7 @@ const TELEFONO = "15753125030";
     "demo.eyebrow": "Demo en vivo",
     "demo.title": "Pruébala: una mini app de inventario real",
     "demo.lead": "Esto no es una imagen. Busca productos, suma o resta existencias y mira cómo la app te avisa cuando algo está por acabarse.",
-    "inv.store": "Mesilla Hardware",
+    "inv.store": "Ferretería El Desierto",
     "inv.live": "En vivo",
     "inv.s1": "Productos",
     "inv.s2": "Unidades",
@@ -69,7 +69,7 @@ const TELEFONO = "15753125030";
     "ba.before": "Antes",
     "ba.after": "Después",
     "new.brand": "Mi Negocio",
-    "new.rating": "★★★★★ 4.9 en Google",
+    "new.rating": "Abierto hoy · 8 AM – 6 PM",
     "new.title": "Servicio confiable en Las Cruces, NM",
     "new.text": "Agenda en línea en menos de un minuto. Te confirmamos por WhatsApp.",
     "new.call": "Llamar",
@@ -115,11 +115,11 @@ const TELEFONO = "15753125030";
     "ex.lead": "Ábrelos y recórrelos: son páginas y apps que funcionan, también en tu celular.",
     "ex1.tag": "Iglesia",
     "ex1.title": "Iglesia Comunidad de Gracia",
-    "ex1.text": "Horarios, transmisión en vivo, eventos, peticiones de oración y donaciones en línea. Bilingüe.",
+    "ex1.text": "Horarios, transmisión en vivo, eventos, peticiones de oración y donaciones en línea.",
     "ex.view": "Ver ejemplo en vivo",
     "ex2.tag": "Negocio",
     "ex2.title": "Sol del Valle Auto Repair",
-    "ex2.text": "Página en inglés para un taller: servicios con precios, horario y formulario para agendar cita.",
+    "ex2.text": "Página bilingüe para un taller mecánico: servicios con precios, horario y formulario para agendar cita.",
     "ex3.tag": "App",
     "ex3.title": "Inventario · Ferretería El Desierto",
     "ex3.text": "App que funciona: existencias, valor del inventario, alertas de resurtido y alta de productos. Español e inglés.",
@@ -211,7 +211,7 @@ const TELEFONO = "15753125030";
     "ct.area": "Zona",
     "ct.areaV": "Las Cruces, NM y alrededores",
     "ct.resp": "Respuesta",
-    "ct.respV": "Respondemos el mismo día hábil",
+    "ct.respV": "Respondemos en menos de 24 horas",
     "ct.waBtn": "Escríbenos por WhatsApp",
     "ct.name": "Nombre",
     "ct.contact": "Teléfono o correo",
@@ -220,6 +220,8 @@ const TELEFONO = "15753125030";
     "ct.ok": "¡Gracias! Recibimos tu mensaje y te contactaremos muy pronto.",
     "ct.err": "No se pudo enviar desde aquí. Escríbenos a blueprintappsweb@gmail.com o por WhatsApp.",
     "foot.tag": "Páginas web y apps a la medida para negocios e iglesias.",
+    "ct.privacy": "Al enviar, aceptas nuestra <a href=\"privacy.html#es\">política de privacidad</a>.",
+    "foot.privacy": "<a href=\"privacy.html#es\">Política de privacidad</a>",
     "foot.made": "Hecho en Las Cruces, NM",
     "inv.search": "Buscar producto o código…",
     "ct.needPh": "Ej.: una página para mi taller con botón de WhatsApp…",
@@ -276,11 +278,16 @@ const TELEFONO = "15753125030";
   $$("[data-i18n-ph]").forEach(el => { EN_PH[el.dataset.i18nPh] = el.placeholder; });
   $$("[data-i18n-aria]").forEach(el => { EN_ARIA[el.dataset.i18nAria] = el.getAttribute("aria-label"); });
 
-  // Idioma principal: inglés. Español con ?lang=es o si el visitante ya lo eligió.
-  let lang = "en";
-  try { const saved = localStorage.getItem("bp-lang"); if (saved === "en" || saved === "es") lang = saved; } catch (e) {}
-  const urlLang = new URLSearchParams(location.search).get("lang");
-  if (urlLang === "en" || urlLang === "es") lang = urlLang;
+  // Idioma: 1) ?lang= en la dirección, 2) lo que la persona eligió con el botón ES/EN,
+  // 3) el idioma de su navegador (español si empieza con "es"), 4) inglés.
+  const pickLang = () => {
+    const urlLang = new URLSearchParams(location.search).get("lang");
+    if (urlLang === "en" || urlLang === "es") return urlLang;
+    try { const saved = localStorage.getItem("bp-lang"); if (saved === "en" || saved === "es") return saved; } catch (e) {}
+    const nav = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+    return nav.toLowerCase().startsWith("es") ? "es" : "en";
+  };
+  let lang = pickLang();
   const t = (k, vars = {}) => STR[lang][k].replace(/\{(\w+)\}/g, (_, v) => vars[v] ?? "");
 
   function applyLang(l) {
@@ -311,7 +318,6 @@ const TELEFONO = "15753125030";
     renderInventory();
     if (typeof baPos !== "undefined") setPos(baPos);
     root.classList.remove("i18n-wait");
-    try { localStorage.setItem("bp-lang", l); } catch (e) {}
   }
 
   /* =========================================================
@@ -359,7 +365,11 @@ const TELEFONO = "15753125030";
   $$("a", nav).forEach(a => a.addEventListener("click", () => setMenu(false)));
   document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
 
-  $("#langBtn").addEventListener("click", () => applyLang(lang === "es" ? "en" : "es"));
+  $("#langBtn").addEventListener("click", () => {
+    const next = lang === "es" ? "en" : "es";
+    try { localStorage.setItem("bp-lang", next); } catch (e) {}   // recordar la elección
+    applyLang(next);
+  });
 
   /* =========================================================
      Portada: largo de cada trazo para la animación SVG

@@ -27,9 +27,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=7">
-<script>(function(d){d.classList.add('js');var l=null;try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('bp-lang')}catch(e){}if(l==='es'){d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},800)}})(document.documentElement)</script>
-<script src="script.js?v=8" defer></script>
+<link rel="stylesheet" href="styles.css?v=8">
+<script>(function(d){d.classList.add('js');var l=null;try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('bp-lang')}catch(e){}if(!l){var n=(navigator.languages&&navigator.languages[0])||navigator.language||'';l=n.toLowerCase().indexOf('es')===0?'es':'en'}if(l==='es'){d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},800)}})(document.documentElement)</script>
+<script src="script.js?v=9" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -240,7 +240,7 @@
           <div class="app-bar">
             <div class="app-title">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/></svg>
-              <strong data-i18n="inv.store">Mesilla Hardware</strong>
+              <strong data-i18n="inv.store">El Desierto Hardware</strong>
             </div>
             <span class="live"><i></i><span data-i18n="inv.live">Live</span></span>
           </div>
@@ -285,7 +285,7 @@
 <!-- ============ 4. ANTES Y DESPUÉS ============ -->
 <section id="antes-despues" class="section">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="section-head center reveal">
       <p class="eyebrow"><span data-i18n="ba.eyebrow">Before & after</span></p>
       <h2 data-i18n="ba.title">Is this how your customers see you on their phone?</h2>
       <p class="lead-dark" data-i18n="ba.lead">Most people look you up on their phone. Tap the buttons or swipe across the phone to see the difference between an old website and one built by us.</p>
@@ -312,7 +312,7 @@
               </div>
               <div class="m-hero">
                 <svg viewBox="0 0 300 120" preserveAspectRatio="none"><path d="M0 120 L40 70 L62 86 L96 40 L118 66 L142 30 L170 74 L196 56 L240 100 L272 78 L300 96 L300 120 Z"/></svg>
-                <span class="nw-pill" data-i18n="new.rating">★★★★★ 4.9 on Google</span>
+                <span class="nw-pill" data-i18n="new.rating">Open today · 8 AM – 6 PM</span>
               </div>
               <div class="m-body">
                 <h4 data-i18n="new.title">Reliable service in Las Cruces, NM</h4>
@@ -395,7 +395,7 @@
         <div class="ex-body">
           <span class="tag" data-i18n="ex1.tag">Church</span>
           <h3 data-i18n="ex1.title">Comunidad de Gracia Church</h3>
-          <p data-i18n="ex1.text">Service times, live stream, events, prayer requests and online giving. Bilingual.</p>
+          <p data-i18n="ex1.text">Service times, live stream, events, prayer requests and online giving.</p>
           <a class="btn btn-outline ex-cta" href="ejemplos/iglesia/" target="_blank" rel="noopener"><span data-i18n="ex.view">View live example</span> <span aria-hidden="true">↗</span></a>
         </div>
       </article>
@@ -407,7 +407,7 @@
         <div class="ex-body">
           <span class="tag" data-i18n="ex2.tag">Business</span>
           <h3 data-i18n="ex2.title">Sol del Valle Auto Repair</h3>
-          <p data-i18n="ex2.text">English website for an auto shop: services with prices, hours and an appointment form.</p>
+          <p data-i18n="ex2.text">Bilingual website for an auto shop: services with prices, hours and an appointment form.</p>
           <a class="btn btn-outline ex-cta" href="ejemplos/taller/" target="_blank" rel="noopener"><span data-i18n="ex.view">View live example</span> <span aria-hidden="true">↗</span></a>
         </div>
       </article>
@@ -630,7 +630,7 @@
         </li>
         <li>
           <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-          <span><small data-i18n="ct.resp">Response time</small><span data-i18n="ct.respV">We reply the same business day</span></span>
+          <span><small data-i18n="ct.resp">Response time</small><span data-i18n="ct.respV">We reply within 24 hours</span></span>
         </li>
         <li>
           <span class="ci ci-fb" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.5-1 1-1h2.2V2.1L14.2 2C10.9 2 10.2 4.4 10.2 6v2.5H8v3.8h2.2V22H14v-9.7h2.9l.4-3.8z"/></svg></span>
@@ -660,6 +660,7 @@
         <textarea id="f-mensaje" name="mensaje" rows="5" required placeholder="E.g. a website for my shop with a WhatsApp button…" data-i18n-ph="ct.needPh"></textarea>
       </div>
       <button class="btn btn-primary btn-block" type="submit" data-i18n="ct.send">Send message</button>
+      <p class="form-note" data-i18n="ct.privacy">By submitting, you agree to our <a href="privacy.html">privacy policy</a>.</p>
       <p class="form-msg ok" id="formOk" role="status" hidden data-i18n="ct.ok">Thank you! We received your message and will contact you very soon.</p>
       <p class="form-msg err" id="formErr" role="alert" hidden data-i18n="ct.err">It couldn't be sent from here. Email us at blueprintappsweb@gmail.com or message us on WhatsApp.</p>
     </form>
@@ -683,7 +684,7 @@
     </div>
     <a class="foot-fb" href="https://www.facebook.com/blueprintappsweb" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.5-1 1-1h2.2V2.1L14.2 2C10.9 2 10.2 4.4 10.2 6v2.5H8v3.8h2.2V22H14v-9.7h2.9l.4-3.8z"/></svg><span>Facebook</span></a>
     <p data-i18n="foot.tag">Custom websites and apps for businesses and churches.</p>
-    <p class="copy">© <span id="year">2026</span> Blueprint Apps &amp; Web · <span data-i18n="foot.made">Made in Las Cruces, NM</span></p>
+    <p class="copy">© <span id="year">2026</span> Blueprint Apps &amp; Web · <span data-i18n="foot.made">Made in Las Cruces, NM</span> · <span data-i18n="foot.privacy"><a href="privacy.html">Privacy policy</a></span></p>
   </div>
 </footer>
 
