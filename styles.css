@@ -865,3 +865,17 @@ html.js .type-in:not([data-typed]){visibility:hidden}
 .cf-shot.no-bar img{height:100%;margin-top:0;object-position:center}
 .cf-stage{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 91%,transparent 100%)}
 @media (max-width:720px){.cf-stage{-webkit-mask-image:none;mask-image:none}}
+
+/* Fotos flotantes del héroe (mesa de diseño) */
+.hero-photos figure{position:absolute;margin:0;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px -24px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.12);background:#13315c}
+.hero-photos img{display:block;width:100%;height:100%;object-fit:cover}
+.hero-photos .hp1{width:36%;aspect-ratio:4/3;top:-12%;right:-6%;transform:rotate(3deg)}
+.hero-photos .hp2{width:38%;aspect-ratio:4/3;bottom:-20%;left:-4%;transform:rotate(-3deg)}
+.hero-photos .hp3{width:32%;aspect-ratio:4/3;bottom:-6%;right:-9%;transform:rotate(2deg)}
+html.js .hero-photos figure{opacity:0;translate:0 18px;transition:opacity .9s ease,translate .9s cubic-bezier(.22,.8,.2,1)}
+html.js .plan.play ~ .hero-photos figure{opacity:1;translate:0 0}
+html.js .plan.play ~ .hero-photos .hp1{transition-delay:2.9s}
+html.js .plan.play ~ .hero-photos .hp2{transition-delay:3.15s}
+html.js .plan.play ~ .hero-photos .hp3{transition-delay:3.4s}
+@media (max-width:900px){.hero-photos .hp1{right:0;top:-8%}.hero-photos .hp2{left:-2%;bottom:-10%}.hero-photos .hp3{right:-1%;bottom:-8%}}
+@media (prefers-reduced-motion:reduce){html.js .hero-photos figure{opacity:1;translate:none;transition:none}}
