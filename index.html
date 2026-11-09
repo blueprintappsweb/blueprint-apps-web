@@ -27,9 +27,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20">
+<link rel="stylesheet" href="styles.css?v=22">
 <script>(function(d){d.classList.add('js');var l=null;try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('bp-lang')}catch(e){}if(!l){var n=(navigator.languages&&navigator.languages[0])||navigator.language||'';l=n.toLowerCase().indexOf('es')===0?'es':'en'}if(l==='es'){d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},800)}})(document.documentElement)</script>
-<script src="script.js?v=18" defer></script>
+<script src="script.js?v=19" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -69,12 +69,13 @@
       "@type": "FAQPage",
       "@id": "https://blueprintappsweb.com/#faq",
       "mainEntity": [
-        {"@type": "Question", "name": "How much does a website cost in Las Cruces?", "acceptedAnswer": {"@type": "Answer", "text": "Our websites start at $275 (Express, a single page). Basic starts at $500, Complete at $950 and a custom app at $1,200. Quotes are free, and the final price is in writing before we start."}},
+        {"@type": "Question", "name": "How much does a website cost in Las Cruces?", "acceptedAnswer": {"@type": "Answer", "text": "Our websites start at $275 (Express, a single page). Basic starts at $500, Complete at $950 and a custom app at $1,500. Quotes are free, and the final price is in writing before we start."}},
         {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "An Express page is ready in a few days. Larger sites and apps depend on how many pages and features they need; the proposal we send you includes the dates."}},
         {"@type": "Question", "name": "Do I need a domain (.com)?", "acceptedAnswer": {"@type": "Answer", "text": "Not to get started. Every project includes help connecting your domain, and if you don't have one yet, we'll help you choose and register it."}},
         {"@type": "Question", "name": "How does payment work?", "acceptedAnswer": {"@type": "Answer", "text": "A 50% deposit when you approve the proposal and the remaining 50% when your site goes live. Prices are in US dollars and don't include New Mexico GRT."}},
         {"@type": "Question", "name": "Can I make changes myself later?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. When we launch, we show you how to use your site. If you'd rather have us update text and photos, the maintenance plan is $35 a month and includes WhatsApp support."}},
-        {"@type": "Question", "name": "Do you build websites in Spanish and English?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work with you in the language you prefer and can build your site in English, Spanish or both. The Complete plan already includes both languages."}}
+        {"@type": "Question", "name": "Do you build websites in Spanish and English?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work with you in the language you prefer and can build your site in English, Spanish or both. The Complete plan already includes both languages."}},
+        {"@type": "Question", "name": "Will my app be in the App Store?", "acceptedAnswer": {"@type": "Answer", "text": "No. Our apps are web apps: your team opens them from a link and installs them on the phone with their own icon, on iPhone and Android, and they also work on computers. Since they don't go through the App Store or Google Play, there are no store fees or approvals, and updates are instant."}}
       ]
     }
   ]
@@ -100,7 +101,7 @@
     </a>
     <nav id="menu" class="nav" aria-label="Main">
       <a href="#servicios" data-i18n="nav.services">Services</a>
-      <a href="#demo" data-i18n="nav.demo">Demo</a>
+      <a href="#apps" data-i18n="nav.apps">Apps</a>
       <a href="#ejemplos" data-i18n="nav.examples">Examples</a>
       <a href="#precios" data-i18n="nav.pricing">Pricing</a>
       <a href="#proceso" data-i18n="nav.process">How we work</a>
@@ -223,6 +224,43 @@
         <p data-i18n="serv.4.d">We update text, photos and hours, keep everything secure and make sure it all keeps running smoothly.</p>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- ============ APPS A LA MEDIDA ============ -->
+<section id="apps" class="section apps-sec">
+  <div class="container apps-grid">
+    <div class="apps-copy reveal">
+      <p class="eyebrow"><span data-i18n="apps.eyebrow">Custom business apps</span></p>
+      <h2><span data-i18n="apps.title">Custom apps that simplify your daily operations</span></h2>
+      <p class="lead-dark"><span data-i18n="apps.lead">Leave spreadsheets, paper and endless text messages behind. We build the tool your team needs, around the way you already work: inventory, orders, appointments, schedules or reports.</span></p>
+      <ul class="apps-feats">
+          <li><span class="af-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg></span><div><strong data-i18n="apps.f1t">Your whole team, in sync</strong><p data-i18n="apps.f1d">Everyone sees the same information in real time, from the shop floor, the truck or the office.</p></div></li>
+          <li><span class="af-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="14" height="10" rx="1.5"/><path d="M6 18h6"/><rect x="16" y="8" width="6" height="12" rx="1.5"/></svg></span><div><strong data-i18n="apps.f2t">On the phone and the computer</strong><p data-i18n="apps.f2d">One app that works on iPhone, Android and any computer. On the phone it gets its own icon on the home screen.</p></div></li>
+          <li><span class="af-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="13" width="4" height="7" rx="1"/><rect x="10" y="9" width="4" height="11" rx="1"/><rect x="17" y="4" width="4" height="16" rx="1"/></svg></span><div><strong data-i18n="apps.f3t">Starts small, grows with you</strong><p data-i18n="apps.f3d">We start with what you need most and add modules later: reports, users, permissions or alerts.</p></div></li>
+      </ul>
+      <div class="apps-note">
+        <span class="af-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></span>
+        <div>
+          <strong data-i18n="apps.nt">How our apps work</strong>
+          <p data-i18n="apps.nd">They are web apps: they open from a link and are installed on the phone like any other app, with their own icon. They are <b>not published in the App Store or Google Play</b>, so there are no store fees or approvals, and every update reaches your whole team right away.</p>
+        </div>
+      </div>
+      <div class="btns">
+        <a class="btn btn-primary" href="#demo"><span data-i18n="apps.cta1">Try the demo app</span></a>
+        <a class="btn btn-outline" href="#contacto" data-plan="App"><span data-i18n="apps.cta2">Tell us about your idea</span></a>
+      </div>
+    </div>
+      <div class="apps-phone reveal" aria-hidden="true">
+        <div class="ap-screen">
+          <div class="ap-status"><span>9:41</span><span>●●● ▮</span></div>
+          <div class="ap-grid"><i style="background:#34c759"><svg viewBox="0 0 24 24"><path d="M5 6h14v12H5z"/></svg></i><i style="background:#0a84ff"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16"/></svg></i><i style="background:#ff9f0a"><svg viewBox="0 0 24 24"><path d="M6 18l6-12 6 12z"/></svg></i><i style="background:#ff375f"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z"/></svg></i><i style="background:#5e5ce6"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5zM5 10h14"/></svg></i><i style="background:#64d2ff"><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"/></svg></i><i style="background:#30d158"><svg viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/></svg></i><i style="background:#bf5af2"><svg viewBox="0 0 24 24"><path d="M7 4h10v16H7z"/></svg></i>
+            <b class="ap-mine"><span><svg viewBox="0 0 64 64"><g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"><path d="M19 21 L10 32 L19 43" stroke="#F2A33A"/><path d="M45 21 L54 32 L45 43" stroke="#F2A33A"/><path d="M25 19 H32 a6.5 6.5 0 0 1 0 13 H25 Z M25 32 H33.5 a7 7 0 0 1 0 14 H25 Z" stroke="#fff"/></g></svg></span><em><span data-i18n="apps.icon">Inventory</span></em></b>
+          </div>
+          <div class="ap-toast"><svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5"/><path d="M5 20h14"/></svg><span data-i18n="apps.toast">Installed on the home screen</span></div>
+          <div class="ap-dock"><i style="background:#34c759"></i><i style="background:#0a84ff"></i><i style="background:#fff"></i><i style="background:#ff9f0a"></i></div>
+        </div>
+      </div>
   </div>
 </section>
 
@@ -589,7 +627,7 @@
       <div class="promo-badge">30%</div>
       <div class="promo-text">
         <strong data-i18n="promo.title">Launch offer</strong>
-        <p data-i18n="promo.text">30% off for our <b>first 3 clients</b> in exchange for a Google review.</p>
+        <p data-i18n="promo.text">30% off for our <b>first 3 clients</b> in exchange for letting us feature the project in our portfolio.</p>
         <p class="promo-meta"><span class="promo-spots" data-i18n="promo.spots"><b>3 of 3</b> spots left</span><span class="promo-ends" data-i18n="promo.ends">Ends December 31, 2026</span></p>
       </div>
       <a href="#contacto" class="btn btn-navy" data-plan="promo" data-i18n="promo.btn">Claim my spot</a>
@@ -635,25 +673,27 @@
       </article>
       <article class="price reveal" style="--i:3">
         <h3>App</h3>
-        <p class="amount"><small data-i18n="pr.from">from</small> $1,200</p>
+        <p class="amount"><small data-i18n="pr.from">from</small> $1,500</p>
         <p class="ptime"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="pr.4.time">Ready in 4–8 weeks</span></p>
 <p class="pdesc" data-i18n="pr.4.d">For replacing spreadsheets and paper: a tool built around how your team works.</p>
         <ul>
           <li data-i18n="pr.4.a">Inventory, appointments or orders</li>
-          <li data-i18n="pr.4.b">Works on phone and computer</li>
+          <li data-i18n="pr.4.b">Phone and computer, with its own icon</li>
           <li data-i18n="pr.4.c">Training for your team</li>
         </ul>
+        <p class="pnote" data-i18n="pr.4.n">Bigger systems with users, permissions and reports are quoted by modules.</p>
         <a href="#contacto" class="btn btn-outline" data-plan="App" data-i18n="pr.cta">Get a quote</a>
       </article>
       <article class="price reveal" style="--i:4">
         <h3 data-i18n="pr.5.t">Maintenance</h3>
         <p class="amount">$35<small data-i18n="pr.month">/mo</small></p>
-        <p class="pdesc" data-i18n="pr.5.d">Peace of mind every month.</p>
+        <p class="pdesc" data-i18n="pr.5.d">For websites: we keep it online, safe and up to date.</p>
         <ul>
-          <li data-i18n="pr.5.a">Text and photo updates</li>
-          <li data-i18n="pr.5.b">Security checks</li>
+          <li data-i18n="pr.5.a">Hosting, monthly check and backup</li>
+          <li data-i18n="pr.5.b">Up to 2 small changes a month</li>
           <li data-i18n="pr.5.c">WhatsApp support</li>
         </ul>
+        <p class="pnote" data-i18n="pr.5.n">App maintenance from $65/mo. The domain (about $15 a year) is paid by the client.</p>
         <a href="#contacto" class="btn btn-outline" data-plan="Mantenimiento" data-i18n="pr.cta">Get a quote</a>
       </article>
     </div>
@@ -704,7 +744,7 @@
     <div class="faq reveal">
       <details>
         <summary data-i18n="faq.1.q">How much does a website cost in Las Cruces?</summary>
-        <p data-i18n="faq.1.a">Our websites start at $275 (Express, a single page). Basic starts at $500, Complete at $950 and a custom app at $1,200. Quotes are free, and the final price is in writing before we start.</p>
+        <p data-i18n="faq.1.a">Our websites start at $275 (Express, a single page). Basic starts at $500, Complete at $950 and a custom app at $1,500. Quotes are free, and the final price is in writing before we start.</p>
       </details>
       <details>
         <summary data-i18n="faq.2.q">How long does it take?</summary>
@@ -725,6 +765,10 @@
       <details>
         <summary data-i18n="faq.6.q">Do you build websites in Spanish and English?</summary>
         <p data-i18n="faq.6.a">Yes. We work with you in the language you prefer and can build your site in English, Spanish or both. The Complete plan already includes both languages.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq.7.q">Will my app be in the App Store?</summary>
+        <p data-i18n="faq.7.a">No. Our apps are web apps: your team opens them from a link and installs them on the phone with their own icon, on iPhone and Android, and they also work on computers. Since they don&#39;t go through the App Store or Google Play, there are no store fees or approvals, and updates are instant.</p>
       </details>
     </div>
   </div>

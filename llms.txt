@@ -12,9 +12,9 @@
 - Express website: from $275. One landing page with call and WhatsApp buttons, ready in a few days.
 - Basic website: from $500. Up to 4 sections or pages, contact form, map and hours.
 - Complete website: from $950. Up to 8 pages, gallery, events or menu, in Spanish and English.
-- Custom app: from $1,200. Inventory, appointments or orders; works on phone and computer; team training.
-- Monthly maintenance: $35/month. Text and photo updates, security checks, WhatsApp support.
-- Launch offer: 30% off for the first 3 clients in exchange for a Google review.
+- Custom app: from $1,500 for a simple app (inventory, appointments or orders); bigger systems with users, permissions and reports are quoted by modules. Apps are web apps installed on the phone home screen (iPhone, Android) and computers; not published in the App Store or Google Play.
+- Website maintenance: $35/month. Hosting, monthly check and backup, up to 2 small changes a month, WhatsApp support. App maintenance from $65/month. Domain (~$15/year) paid by the client.
+- Launch offer: 30% off for the first 3 clients in exchange for featuring the project in our portfolio. Ends December 31, 2026.
 
 Every project includes: mobile-friendly design, fast loading, basic local SEO, call/WhatsApp/map buttons, HTTPS, help connecting your domain, 2 rounds of revisions and training.
 
