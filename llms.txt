@@ -13,7 +13,7 @@
 - Basic website: from $500. Up to 4 sections or pages, contact form, map and hours.
 - Complete website: from $950. Up to 8 pages, gallery, events or menu, in Spanish and English.
 - Custom app: from $1,500 for a simple app (inventory, appointments or orders); bigger systems with users, permissions and reports are quoted by modules. Apps are web apps installed on the phone home screen (iPhone, Android) and computers; not published in the App Store or Google Play.
-- Website maintenance: $35/month. Hosting, monthly check and backup, up to 2 small changes a month, WhatsApp support. App maintenance from $65/month. Domain (~$15/year) paid by the client.
+- Website maintenance: Basic $35/month (up to 4 small changes a month, hosting, monthly check and backup, WhatsApp support); Business $65/month (up to 8 small changes, priority attention). A small change is one text, photo, schedule or price; new sections or redesigns are quoted separately; extra changes $15 each; unused changes do not carry over. App maintenance from $85/month, quoted per app. Domain (~$15/year) paid by the client.
 - Launch offer: 30% off for the first 3 clients in exchange for featuring the project in our portfolio. Ends December 31, 2026.
 
 Every project includes: mobile-friendly design, fast loading, basic local SEO, call/WhatsApp/map buttons, HTTPS, help connecting your domain, 2 rounds of revisions and training.

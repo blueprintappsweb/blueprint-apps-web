@@ -916,3 +916,18 @@ html.js .type-in:not([data-typed]){visibility:hidden}
 .price.featured .pnote{color:#c9d6ea}
 @media (max-width:920px){.apps-grid{grid-template-columns:1fr;gap:48px}.apps-phone{width:min(260px,70vw)}}
 @media (prefers-reduced-motion:reduce){.ap-mine>span{animation:none}}
+
+/* Planes de mantenimiento */
+.maint{margin-top:44px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+.maint h3{font-size:1.4rem;margin-bottom:18px}
+.mplans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mplan{border:1px solid var(--line);border-radius:16px;padding:20px;background:var(--bg)}
+.mplan.pop{border-color:var(--orange);background:#fff8ec}
+.mplan h4{margin:0 0 4px;font:700 1.05rem var(--head);color:var(--blue)}
+.mp-amount{font:700 1.7rem/1.1 var(--head);color:var(--navy);margin:0 0 12px;letter-spacing:-.02em}
+.mp-amount small{font:500 .8rem var(--body);color:var(--muted);letter-spacing:0;margin:0 2px}
+.mplan ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:.92rem}
+.mplan li{padding-left:22px;position:relative;line-height:1.4}
+.mplan li::before{content:"";position:absolute;left:0;top:4px;width:14px;height:14px;border-radius:50%;background:#e3ecf8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231E56A0' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L19 7'/%3E%3C/svg%3E") center/9px no-repeat}
+.mt-def{margin:18px 0 0;font-size:.9rem;color:var(--muted);line-height:1.55}
+@media (max-width:720px){.mplans{grid-template-columns:1fr}.maint{padding:22px}}
